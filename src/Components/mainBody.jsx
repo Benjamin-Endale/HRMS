@@ -1,16 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Leave_Management from '../pages/AsideLinks/LeaveManegment'
+import Attendance from '../pages/AsideLinks/Attendance'
 
 
-const MainBody = () => {
+const MainBody = ({visible,setVisible}) => {
 
-    const [visible, setVisible] = useState('Dashboard')
     
   return (
     <>
-    <main className='flex'>
-        <aside className='w-[20.5rem] h-screen flex flex-col gap-[50px] pl-[2.75rem]  border border-amber-300'>
+        <aside className='w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] pl-[2.75rem] pt-[3.5rem] border border-r-gray-700'>
             <div className=' flex items-center gap-[1.25rem] '>
                 <img className='w-[2.0625rem] h-[2.3125rem]' src="/image/logo.png" alt="" />
                 <div>
@@ -19,7 +19,7 @@ const MainBody = () => {
                 </div>
             </div>
             <nav>
-            <section className=''> 
+            <section className='space-y-[1.5625rem]'> 
                 <div>
                     <h4 className='text-white'>Core</h4>
                 </div>
@@ -56,16 +56,57 @@ const MainBody = () => {
                         </div>
                     </div>
                 </div>
+                {/* Employee */}
+                <div className='flex items-center  h-[2.0625rem]   '>
+                    <div  className={`${visible === 'Employee' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
+                    <div onClick={() => setVisible('Employee')} className='navLinkconfig'>
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={visible  === 'Employee' ? 'white' : '#5D6150'} stroke-width="1.5">
+                        <path d="M7.875 8.75C9.808 8.75 11.375 7.183 11.375 5.25C11.375 3.317 9.808 1.75 7.875 1.75C5.942 1.75 4.375 3.317 4.375 5.25C4.375 7.183 5.942 8.75 7.875 8.75Z"  stroke-width="1.5"/>
+                        <path d="M13.125 7.875C14.5748 7.875 15.75 6.69974 15.75 5.25C15.75 3.80026 14.5748 2.625 13.125 2.625"  stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M7.875 18.375C11.2577 18.375 14 16.808 14 14.875C14 12.942 11.2577 11.375 7.875 11.375C4.49226 11.375 1.75 12.942 1.75 14.875C1.75 16.808 4.49226 18.375 7.875 18.375Z"  stroke-width="1.5"/>
+                        <path d="M15.75 12.25C17.2849 12.5866 18.375 13.439 18.375 14.4375C18.375 15.3381 17.488 16.12 16.1875 16.5116"  stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <Link to='/employees'><h4 className={`${visible === 'Employee' ? 'text-white' : 'text-limegray'}`}>Employee</h4></Link>
+                        </div>
+                    </div>
+                </div>
+                {/* Attendance */}
+                <div className='flex items-center  h-[2.0625rem]   '>
+                    <div  className={`${visible === 'Attendance' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
+                    <div onClick={() => setVisible('Attendance')} className='navLinkconfig'>
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={visible === "Attendance" ? 'white' : '#5D6150'} stroke-width='1.3125'>
+                        <path d="M8.75 6.125H1.75"   stroke-linecap="round"/>
+                        <path d="M7 10.5H1.75"   stroke-linecap="round"/>
+                        <path d="M8.75 14.875H1.75"   stroke-linecap="round"/>
+                        <path d="M14.875 14.875C17.2912 14.875 19.25 12.9162 19.25 10.5C19.25 8.08375 17.2912 6.125 14.875 6.125C12.4588 6.125 10.5 8.08375 10.5 10.5C10.5 12.9162 12.4588 14.875 14.875 14.875Z"  />
+                        <path d="M14.875 8.75V10.3654L15.75 11.375"   stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <Link to='/Attendance'><h4 className={`${visible === 'Attendance' ? 'text-white' : 'text-limegray'}`}>Attendance</h4></Link>
+                        </div>
+                    </div>
+                </div>
 
+                {/* Leave Management */}
+                <div className='flex items-center  h-[2.0625rem]   '>
+                    <div  className={`${visible === 'Leave Management' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
+                    <div onClick={() => setVisible('Leave Management')} className='navLinkconfig'>
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={visible === "Leave Management" ? 'white' : '#5D6150'}>
+<path d="M1.75 10.5C1.75 7.20017 1.75 5.55026 2.77512 4.52512C3.80026 3.5 5.45017 3.5 8.75 3.5H12.25C15.5498 3.5 17.1998 3.5 18.2248 4.52512C19.25 5.55026 19.25 7.20017 19.25 10.5V12.25C19.25 15.5498 19.25 17.1998 18.2248 18.2248C17.1998 19.25 15.5498 19.25 12.25 19.25H8.75C5.45017 19.25 3.80026 19.25 2.77512 18.2248C1.75 17.1998 1.75 15.5498 1.75 12.25V10.5Z" />
+<path d="M6.125 3.5V2.1875"  stroke-linecap="round"/>
+<path d="M14.875 3.5V2.1875"  stroke-linecap="round"/>
+<path d="M2.1875 7.875H18.8125"  stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <Link to='/leaveManegment'><h4 className={`${visible === 'Leave Management' ? 'text-white' : 'text-limegray'}`}>Leave Management</h4></Link>
+                        </div>
+                    </div>
+                </div>
             </section>
             </nav>
         </aside>
-        <div className='flex flex-1 items-center h-[3.8125rem] border border-amber-500 '>
-            <header className=''>
-                <h4  className='text-white'>Benjamin</h4>
-            </header>
-        </div>
-    </main>
+
     </>
   )
 }
