@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { Outlet } from 'react-router-dom'
+import { Outlet,useLocation } from 'react-router-dom'
 import MainBody from '../Components/MainBody'
 import Header from '../Components/Header'
 import LoginPage from '../Components/LoginPage'
+import { useState } from 'react'
 
 const RootLayout = () => {
-    const [visible, setVisible] = useState('Dashboard')
+    const location = useLocation()
+    
+    const path = location.pathname
+
+    const readPath = path === '/' ? 'Dashboard' : path.replace('/', '')
   return (
     <> 
     <div className='flex gap-[4.4375rem] '>
-        <MainBody visible={visible} setVisible={setVisible} />
+        <MainBody readPath={readPath} />
         <div className='flex flex-col flex-1 gap-[4.25rem]'>
             <div className='flex  pt-[3.5rem]  '>
-                <Header  visible={visible}/>
+                <Header  readPath={readPath}/>
             </div>
             <div className='flex-1'>
                 <Outlet />
