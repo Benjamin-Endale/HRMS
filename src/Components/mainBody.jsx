@@ -29,7 +29,7 @@ const MainBody = ({readPath}) => {
                 {/* Core */}
                 <section className='space-y-[1.5625rem]'> 
                     <div>
-                        <h4 className={ `${detect == true ? 'text-lemongreen' : 'text-limegray'}`}>Core</h4>
+                        <h4 className='text-[15px] text-limegray'>Core</h4>
                     </div>
                     <div className='flex items-center  h-[2.0625rem]   '>
                         <div  className={`${readPath === 'Dashboard' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
