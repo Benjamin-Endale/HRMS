@@ -10,7 +10,9 @@ const Header = ({ readPath }) => {
     Leave_Management: "Manage employee leave requests, balances, and policies.",
     Recruitment: "",
     Performance:"",
-    Training:""
+    Training:"",
+    Announcement:"",
+    Assets:""
 
 
   }
@@ -24,7 +26,9 @@ const Header = ({ readPath }) => {
     "leaveManagment": "Leave_Management",
     "recruitment": "Recruitment",
     "performance":"Performance",
-    "training":"Training"
+    "training":"Training",
+    "announcement":"Announcement",
+    "assets":"Assets"
   }
 
   // Safely access the right key

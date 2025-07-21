@@ -35,3 +35,23 @@
     @apply flex gap-[1.375rem] items-center justify-center
   }
 }
+
+.customBorder{
+  border: 2px solid rgba(223, 223, 223, 0.03) ;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+
+.scrollBar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  background-color: rgba(223, 223, 223, 0.03); 
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background-color: rgba(223, 223, 223, 0.03); 
+}

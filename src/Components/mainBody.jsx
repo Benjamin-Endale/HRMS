@@ -1,38 +1,28 @@
-import React from 'react'
+import React , {useState} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { boolean } from 'zod'
 
 
 const MainBody = ({readPath}) => {
-        // const coreDash = ["Dashboard",'organization','employees','attendance','leaveManagment']
-        // const detect = false;
-        // const handlegreen = () =>{
-        //     coreDash.forEach(element => {
-        //         if(element === readPath){
-        //             return detect == true;
-        //         }
-        //     });
-        // }
-    
   return (
 
     <>
-        <aside className='w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] pl-[2.75rem] pt-[3.5rem] border border-r-gray-700 overflow'>
-            <div className=' flex items-center gap-[1.25rem] '>
+        <aside className=' customBorder scrollBar w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] relative pl-[2.75rem] pt-[3.5rem] overflow-y-auto'>
+            <div className=' flex items-center gap-[1.25rem]  '>
                 <img className='w-[2.0625rem] h-[2.3125rem]' src="/image/logo.png" alt="" />
                 <div>
                     <h1 className='text-[1.4rem] text-white'>HRMS Platforms</h1>
-                    <h4 className='text-limegray text-[1rem]]'>Multi-Tenant HR System </h4>
+                    <h4 className='text-limegray text-[1rem]'>Multi-Tenant HR System </h4>
                 </div>
             </div>
             <nav className='flex flex-col gap-[4.0625rem]'>
                 {/* Core */}
                 <section className='space-y-[1.5625rem]'> 
                     <div>
-                        <h4 className='text-[15px] text-limegray'>Core</h4>
+                        <h4 className={`${['Dashboard' , 'organization' , 'employees', 'attendance' , 'leaveManagment'].includes(readPath) ? 'text-lemongreen' : 'text-limegray'} text-[0.9375rem]`}>CORE</h4>
                     </div>
-                    <div className='flex items-center  h-[2.0625rem]   '>
-                        <div  className={`${readPath === 'Dashboard' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
+                    <div className='flex items-center  h-[2.0625rem] ' >
+                        <div className={`${readPath === 'Dashboard' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg  width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke= {readPath === 'Dashboard' ? 'white' : '#5D6150'} stroke-width="1.3125">
             <path d="M2.1875 5.6875C2.1875 4.03758 2.1875 3.21262 2.70007 2.70007C3.21262 2.1875 4.03758 2.1875 5.6875 2.1875C7.33742 2.1875 8.16238 2.1875 8.67493 2.70007C9.1875 3.21262 9.1875 4.03758 9.1875 5.6875V15.3125C9.1875 16.9624 9.1875 17.7873 8.67493 18.2999C8.16238 18.8125 7.33742 18.8125 5.6875 18.8125C4.03758 18.8125 3.21262 18.8125 2.70007 18.2999C2.1875 17.7873 2.1875 16.9624 2.1875 15.3125V5.6875Z" />
@@ -45,8 +35,8 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Organization */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
-                        <div  className={`${readPath === 'organization' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
+                    <div className='flex items-center  h-[2.0625rem]' >
+                        <div  className={`${readPath === 'organization' ? 'flex' : 'hidden'}  absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'organization' ? 'white' : '#5D6150'} stroke-width="1.3125">
     <path d="M19.25 19.25H1.75"  stroke-linecap="round"/>
@@ -115,7 +105,7 @@ const MainBody = ({readPath}) => {
                 <section className='space-y-[1.5625rem]'> 
                     {/* Recruitment */}
                     <div>
-                        <h4 className='text-limegray text-[15px]'>TALENT</h4>
+                        <h4 className= {`${['recruitment', 'performance' , 'training'].includes(readPath) ? 'text-lemongreen' : 'text-limegray'} text-[0.9375rem]`}>TALENT</h4>
                     </div>
                     <div className='flex items-center  h-[2.0625rem]   '>
                         <div  className={`${readPath === 'recruitment' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
@@ -132,9 +122,6 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Performance */}
-                    {/* stroke-width="1.3125" */}
-                    {/* #5D6150 */}
-                    {/* stroke={readPath === 'organization' ? 'white' : '#5D6150'} stroke-width="1.5" */}
                     <div className='flex items-center  h-[2.0625rem]   '>
                         <div  className={`${readPath === 'performance' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
@@ -169,7 +156,7 @@ const MainBody = ({readPath}) => {
                 <section className='space-y-[1.5625rem]'> 
 
                     <div>
-                        <h4 className='text-limegray text-[15px]'>OPERATION</h4>
+                        <h4 className= {`${['assets', 'announcement'].includes(readPath) ? 'text-lemongreen' : 'text-limegray'} text-[0.9375rem]`}>OPERATION</h4>
                     </div>
 
                     {/* Assets */}                    
