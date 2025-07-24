@@ -8,11 +8,11 @@ const MainBody = ({readPath}) => {
 
     <>
         <aside className=' customBorder scrollBar w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] relative  pt-[3.5rem] overflow-y-auto font-semibold'>
-            <div className=' flex items-center gap-[1.25rem]'>
+            <div className=' flex items-center gap-[1.25rem] pl-[2.75rem]'>
                 <img className='w-[2.0625rem] h-[2.3125rem]' src="/image/logo.png" alt="" />
                 <div >
                     <h1 className='text-[1.4rem] text-white'>HRMS Platforms</h1>
-                    <h4 className='text-limegray text-[1rem]'>Multi-Tenant HR System </h4>
+                    <h4 className='text-limegray font-medium'>Multi-Tenant HR System </h4>
                 </div>
             </div>
             <nav className='flex flex-col gap-[4.0625rem] overflow-y-auto scrollBar '>

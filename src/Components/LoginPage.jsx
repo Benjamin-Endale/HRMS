@@ -7,7 +7,7 @@ const LoginPage = () => {
   const languages = ['Amharic', 'Oromic', 'Afan oromo','English']
 
   return (
-    <main className='h-screen w-screen flex items-center justify-center '>
+    <main className='h-screen w-screen flex items-center justify-center font-semibold '>
       <div className="flex justify-between items-center">
         <div className=" w-[40.875rem] h-[42.4375rem] relative ">
           <section className="flex flex-col gap-[4.78125rem] relative">
