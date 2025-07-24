@@ -4,7 +4,6 @@
 *{
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
   font-style: normal;
 }
 @theme{
@@ -12,13 +11,14 @@
   --color-graysh:#4F4F4F;
   --color-limegray:#5D6150;
   --color-blackish:#1B1F0E;
+  --color-accountColor:#899072;
 }
 @layer components{
   .iconheader {
     @apply flex items-center gap-[20px]
   }
   .headertxt{
-    @apply text-[20px] text-white  leading-none
+    @apply text-[20px] font-semibold text-white  leading-none
   }
   .maindivider{
     @apply flex gap-[20px]

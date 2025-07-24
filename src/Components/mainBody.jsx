@@ -7,7 +7,7 @@ const MainBody = ({readPath}) => {
   return (
 
     <>
-        <aside className=' customBorder scrollBar w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] relative  pt-[3.5rem] overflow-y-auto '>
+        <aside className=' customBorder scrollBar w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] relative  pt-[3.5rem] overflow-y-auto font-semibold'>
             <div className=' flex items-center gap-[1.25rem]'>
                 <img className='w-[2.0625rem] h-[2.3125rem]' src="/image/logo.png" alt="" />
                 <div >
@@ -30,7 +30,7 @@ const MainBody = ({readPath}) => {
             <path d="M11.8125 4.8125C11.8125 3.99711 11.8125 3.58941 11.9457 3.2678C12.1233 2.83901 12.464 2.49833 12.8928 2.32071C13.2144 2.1875 13.6221 2.1875 14.4375 2.1875H16.1875C17.0029 2.1875 17.4106 2.1875 17.7322 2.32071C18.161 2.49833 18.5017 2.83901 18.6793 3.2678C18.8125 3.58941 18.8125 3.99711 18.8125 4.8125C18.8125 5.62789 18.8125 6.03559 18.6793 6.3572C18.5017 6.78599 18.161 7.12667 17.7322 7.30429C17.4106 7.4375 17.0029 7.4375 16.1875 7.4375H14.4375C13.6221 7.4375 13.2144 7.4375 12.8928 7.30429C12.464 7.12667 12.1233 6.78599 11.9457 6.3572C11.8125 6.03559 11.8125 5.62789 11.8125 4.8125Z"/>
                             </svg>
                             <div>
-                                <NavLink to='/'><h4 className={`${readPath === 'Dashboard' ? 'text-white' : 'text-limegray'}`}>Dashboard</h4></NavLink>
+                                <NavLink to='/'><h4 className={`${readPath === 'Dashboard' ? 'text-white' : 'text-limegray'} ` }>Dashboard</h4></NavLink>
                             </div>
                         </div>
                     </div>

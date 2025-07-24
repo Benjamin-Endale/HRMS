@@ -20,7 +20,7 @@ const RootLayout = () => {
             <div className='flex  pt-[3.5rem]  '>
                 <Header  readPath={readPath}/>
             </div>
-            <div className='flex-1'>
+            <div className='w-[calc(100%-3.0625rem)] '>
                 <Outlet />
             </div>
         </div>
