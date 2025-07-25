@@ -10,7 +10,7 @@ const Dashboard = () => {
           {/* firstCardsection */}
           <div className='flex gap-[2.5625rem]'>
             {/* cardDashMainContent */}
-            <div className='cardDash bg-lemongreen'>
+            <div className='cardDash bg-[url(./image/imageDashcard.png)]'>
               <div className='h-full between flex-col'>
                 <div className='flex justify-between'>
                   <div>
@@ -77,9 +77,9 @@ const Dashboard = () => {
 
 
         {/* secondSection */}
-        <div className='w-[30.375rem] center-center h-[49.9375rem] bg-[rgba(190,229,50,0.05)] border rounded-3xl border-blue-600 font-semibold'>
+        <div className='w-[30.375rem] center-center h-[49.9375rem] bg-[rgba(190,229,50,0.05)] rounded-3xl font-semibold'>
           <div className='space-y-[5.125rem] w-[24.1875rem]' >
-            <div className='flex flex-col border gap-[3.0625rem] h-[22.3125rem]'>
+            <div className='flex flex-col  gap-[3.0625rem] h-[22.3125rem]'>
               {/* activitiesContainer */}
               <div className='between'>
                 <div>
@@ -88,7 +88,9 @@ const Dashboard = () => {
                 </div>
                 <button type="button" className='text-lemongreen font-medium self-end text-[15px]'>See more</button>
               </div>
-              <div className='flex flex-col gap-[0.9375rem]'>
+
+              {/* notificationContainer */}
+              <div className='flex flex-col gap-[0.9375rem] scrollBarDash overflow-y-auto'>
 
                 <div className='cardActivitydash'>
                   <div>
@@ -125,7 +127,7 @@ const Dashboard = () => {
             </div>
 
             {/* SecurtiySection */}
-            <div className='flex flex-col border gap-[3.0625rem] h-[16.875rem]' >
+            <div className='flex flex-col  gap-[3.0625rem] h-[16.875rem]' >
               <div className='between'>
                 <div>
                   <h1 className='text-white text-xl'>System Alerts</h1>
@@ -133,7 +135,8 @@ const Dashboard = () => {
                 </div>
                 <button type="button" className='text-lemongreen font-medium self-end text-[15px]'>See more</button>
               </div>
-              <div>
+              {/* notificationContainer */}
+              <div className='flex flex-col gap-[0.9375rem]  scrollBarDash overflow-y-auto'>
                 {/* activitiesContainer */}
                 <div className='cardActivitydash'>
                   <div>
@@ -143,6 +146,42 @@ const Dashboard = () => {
                     </svg>
                   </div>
                   <div className='flex flex-col '>
+                    <span className='text-accountColor text-nowrap'> Performance Review Deadline</span>
+                    <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
+                  </div>
+                </div>
+                                <div className='cardActivitydash'>
+                  <div>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 10.5C1.75 6.37521 1.75 4.31281 3.03141 3.03141C4.31281 1.75 6.37521 1.75 10.5 1.75C14.6248 1.75 16.6872 1.75 17.9686 3.03141C19.25 4.31281 19.25 6.37521 19.25 10.5C19.25 14.6248 19.25 16.6872 17.9686 17.9686C16.6872 19.25 14.6248 19.25 10.5 19.25C6.37521 19.25 4.31281 19.25 3.03141 17.9686C1.75 16.6872 1.75 14.6248 1.75 10.5Z" stroke="#DFDFDF" stroke-width="1.5"/>
+                    <path d="M6.125 12.25L7.69728 10.3632C8.32032 9.61564 8.63184 9.24175 9.04164 9.24175C9.45149 9.24175 9.76299 9.61564 10.3861 10.3632L10.6139 10.6368C11.237 11.3844 11.5485 11.7582 11.9584 11.7582C12.3681 11.7582 12.6797 11.3844 13.3027 10.6368L14.875 8.75" stroke="#DFDFDF" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div className='flex flex-col '>
+                    <span className='text-accountColor text-nowrap'> Performance Review Deadline</span>
+                    <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
+                  </div>
+                </div>
+                                <div className='cardActivitydash'>
+                  <div>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 10.5C1.75 6.37521 1.75 4.31281 3.03141 3.03141C4.31281 1.75 6.37521 1.75 10.5 1.75C14.6248 1.75 16.6872 1.75 17.9686 3.03141C19.25 4.31281 19.25 6.37521 19.25 10.5C19.25 14.6248 19.25 16.6872 17.9686 17.9686C16.6872 19.25 14.6248 19.25 10.5 19.25C6.37521 19.25 4.31281 19.25 3.03141 17.9686C1.75 16.6872 1.75 14.6248 1.75 10.5Z" stroke="#DFDFDF" stroke-width="1.5"/>
+                    <path d="M6.125 12.25L7.69728 10.3632C8.32032 9.61564 8.63184 9.24175 9.04164 9.24175C9.45149 9.24175 9.76299 9.61564 10.3861 10.3632L10.6139 10.6368C11.237 11.3844 11.5485 11.7582 11.9584 11.7582C12.3681 11.7582 12.6797 11.3844 13.3027 10.6368L14.875 8.75" stroke="#DFDFDF" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div className='flex flex-col '>
+                    <span className='text-accountColor text-nowrap'> Performance Review Deadline</span>
+                    <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
+                  </div>
+                </div>
+                <div className='cardActivitydash'>
+                  <div>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 10.5C1.75 6.37521 1.75 4.31281 3.03141 3.03141C4.31281 1.75 6.37521 1.75 10.5 1.75C14.6248 1.75 16.6872 1.75 17.9686 3.03141C19.25 4.31281 19.25 6.37521 19.25 10.5C19.25 14.6248 19.25 16.6872 17.9686 17.9686C16.6872 19.25 14.6248 19.25 10.5 19.25C6.37521 19.25 4.31281 19.25 3.03141 17.9686C1.75 16.6872 1.75 14.6248 1.75 10.5Z" stroke="#DFDFDF" stroke-width="1.5"/>
+                    <path d="M6.125 12.25L7.69728 10.3632C8.32032 9.61564 8.63184 9.24175 9.04164 9.24175C9.45149 9.24175 9.76299 9.61564 10.3861 10.3632L10.6139 10.6368C11.237 11.3844 11.5485 11.7582 11.9584 11.7582C12.3681 11.7582 12.6797 11.3844 13.3027 10.6368L14.875 8.75" stroke="#DFDFDF" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div className='flex flex-col leading-4 gap-[4px] '>
                     <span className='text-accountColor text-nowrap'> Performance Review Deadline</span>
                     <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
                   </div>

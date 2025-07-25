@@ -17,11 +17,11 @@ const MainBody = ({readPath}) => {
             </div>
             <nav className='flex flex-col gap-[4.0625rem] overflow-y-auto scrollBar '>
                 {/* Core */}
-                <section className='space-y-[1.5625rem] w-full  pl-[2.75rem] relative '> 
+                <section className='space-y-[1.5625rem] w-full  pl-[2.75rem] relative'> 
                     <div>
                         <h4 className={`${['Dashboard' , 'organization' , 'employees', 'attendance' , 'leaveManagment'].includes(readPath) ? 'text-lemongreen' : 'text-limegray'} text-[0.9375rem]`}>CORE</h4>
                     </div>
-                    <div className='flex items-center  h-[2.0625rem] ' >
+                    <div className='flex items-center' >
                         <div className={`${readPath === 'Dashboard' ? 'flex' : 'hidden'} absolute  left-0   navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg  width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke= {readPath === 'Dashboard' ? 'white' : '#5D6150'} stroke-width="1.3125">
@@ -35,7 +35,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Organization */}
-                    <div className='flex items-center  h-[2.0625rem]' >
+                    <div className='flex items-center' >
                         <div  className={`${readPath === 'organization' ? 'flex' : 'hidden'}  absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'organization' ? 'white' : '#5D6150'} stroke-width="1.3125">
@@ -55,7 +55,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Employee */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'employees' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'employees' ? 'white' : '#5D6150'} stroke-width="1.5">
@@ -70,7 +70,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Attendance */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'attendance' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'attendance' ? 'white' : '#5D6150'} stroke-width="1.3125">
@@ -86,7 +86,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Leave Management */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'leaveManagment' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'leaveManagment' ? 'white' : '#5D6150'} stroke-width="1.3125">
@@ -107,7 +107,7 @@ const MainBody = ({readPath}) => {
                     <div>
                         <h4 className= {`${['recruitment', 'performance' , 'training'].includes(readPath) ? 'text-lemongreen' : 'text-limegray'} text-[0.9375rem]`}>TALENT</h4>
                     </div>
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'recruitment' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'recruitment' ? 'white' : '#5D6150'} stroke-width="1.5">
@@ -122,7 +122,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Performance */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'performance' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'performance' ? 'white' : '#5D6150'} stroke-width="1.5">
@@ -136,7 +136,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Training */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'training' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'training' ? 'white' : '#5D6150'} stroke-width="1.5">
@@ -160,7 +160,7 @@ const MainBody = ({readPath}) => {
                     </div>
 
                     {/* Assets */}                    
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'assets' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={readPath === 'assets' ? 'white' : '#5D6150'} stroke-width="1.5">
@@ -174,7 +174,7 @@ const MainBody = ({readPath}) => {
                         </div>
                     </div>
                     {/* Announcement */}
-                    <div className='flex items-center  h-[2.0625rem]   '>
+                    <div className='flex items-center   '>
                         <div  className={`${readPath === 'announcement' ? 'flex' : 'hidden'} absolute  left-0  navBarhover `}></div>
                         <div className='navLinkconfig'>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" stroke = {readPath === 'announcement' ? 'white' : '#5D6150'} stroke-width="1.5" >
@@ -184,7 +184,7 @@ const MainBody = ({readPath}) => {
                             <path d="M1.75 10.5C1.75 6.37521 1.75 4.31281 3.03141 3.03141C4.31281 1.75 6.37521 1.75 10.5 1.75C14.6248 1.75 16.6872 1.75 17.9686 3.03141C19.25 4.31281 19.25 6.37521 19.25 10.5C19.25 14.6248 19.25 16.6872 17.9686 17.9686C16.6872 19.25 14.6248 19.25 10.5 19.25C6.37521 19.25 4.31281 19.25 3.03141 17.9686C1.75 16.6872 1.75 14.6248 1.75 10.5Z" />
                             </svg>
                             <div>
-                                <NavLink to='/announcement'><h4 className={`${readPath === 'performance' ? 'text-white' : 'text-limegray'}`}>Announcement</h4></NavLink>
+                                <NavLink to='/announcement'><h4 className={`${readPath === 'announcement' ? 'text-white' : 'text-limegray'}`}>Announcement</h4></NavLink>
                             </div>
                         </div>
                     </div>
