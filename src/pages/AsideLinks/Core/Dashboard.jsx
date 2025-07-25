@@ -61,7 +61,7 @@ const Dashboard = () => {
           </div>
 
           {/* secondSectionofDash */}
-          <div>
+          <div className='space-y-[3.875rem]'>
             <div className='between'>
               {/* header */}
               <div>
@@ -70,8 +70,144 @@ const Dashboard = () => {
               </div>
               <button type="button" className='text-lemongreen font-medium self-end text-[15px]'>See more</button>
             </div>
+
+            {/* headerSection */}
+            <div className='space-y-[2.25rem] h-[23.0625rem] scrollBarDash overflow-y-auto'>
+              <div className='space-y-[1.1875rem]'>
+                <div className='between-center'>
+                  <div className='flex space-x-[1.375rem]'>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.25 19.25H1.75" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M14.875 19.25V5.25C14.875 3.60008 14.875 2.77512 14.3624 2.26257C13.8498 1.75 13.0249 1.75 11.375 1.75H9.625C7.97508 1.75 7.15012 1.75 6.63757 2.26257C6.125 2.77512 6.125 3.60008 6.125 5.25V19.25" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M18.375 19.25V10.0625C18.375 8.83356 18.375 8.21915 18.08 7.77775C17.9524 7.58667 17.7883 7.42261 17.5972 7.29493C17.1559 7 16.5414 7 15.3125 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M2.625 19.25V10.0625C2.625 8.83356 2.625 8.21915 2.91993 7.77775C3.04761 7.58667 3.21167 7.42261 3.40275 7.29493C3.84415 7 4.4586 7 5.6875 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M10.5 19.25V16.625" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 4.375H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 7H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 9.625H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 12.25H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+                    </svg>
+                    <span className='text-limegray '>Engineering</span>
+                  </div>
+                  <div>
+                    <ul className='text-white flex gap-[1.75rem]'>
+                      <li className='textLimegray'>324 employees</li>
+                      <li className='list-disc marker:text-lemongreen textLimegray'>95% attendance</li>
+                    </ul>
+                  </div>
+                </div>
+                {/* progressBar*/}
+                <div className='h-[5px] w-full bg-white rounded-[30px]'></div>
+              </div>
+              <div className='space-y-[1.1875rem]'>
+                <div className='between-center'>
+                  <div className='flex space-x-[1.375rem]'>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.25 19.25H1.75" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M14.875 19.25V5.25C14.875 3.60008 14.875 2.77512 14.3624 2.26257C13.8498 1.75 13.0249 1.75 11.375 1.75H9.625C7.97508 1.75 7.15012 1.75 6.63757 2.26257C6.125 2.77512 6.125 3.60008 6.125 5.25V19.25" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M18.375 19.25V10.0625C18.375 8.83356 18.375 8.21915 18.08 7.77775C17.9524 7.58667 17.7883 7.42261 17.5972 7.29493C17.1559 7 16.5414 7 15.3125 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M2.625 19.25V10.0625C2.625 8.83356 2.625 8.21915 2.91993 7.77775C3.04761 7.58667 3.21167 7.42261 3.40275 7.29493C3.84415 7 4.4586 7 5.6875 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M10.5 19.25V16.625" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 4.375H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 7H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 9.625H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 12.25H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+                    </svg>
+                    <span className='text-limegray '>Engineering</span>
+                  </div>
+                  <div>
+                    <ul className='text-white flex gap-[1.75rem]'>
+                      <li className='textLimegray'>324 employees</li>
+                      <li className='list-disc marker:text-lemongreen textLimegray'>95% attendance</li>
+                    </ul>
+                  </div>
+                </div>
+                {/* progressBar*/}
+                <div className='h-[5px] w-full bg-white rounded-[30px]'></div>
+              </div>
+              <div className='space-y-[1.1875rem]'>
+                <div className='between-center'>
+                  <div className='flex space-x-[1.375rem]'>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.25 19.25H1.75" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M14.875 19.25V5.25C14.875 3.60008 14.875 2.77512 14.3624 2.26257C13.8498 1.75 13.0249 1.75 11.375 1.75H9.625C7.97508 1.75 7.15012 1.75 6.63757 2.26257C6.125 2.77512 6.125 3.60008 6.125 5.25V19.25" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M18.375 19.25V10.0625C18.375 8.83356 18.375 8.21915 18.08 7.77775C17.9524 7.58667 17.7883 7.42261 17.5972 7.29493C17.1559 7 16.5414 7 15.3125 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M2.625 19.25V10.0625C2.625 8.83356 2.625 8.21915 2.91993 7.77775C3.04761 7.58667 3.21167 7.42261 3.40275 7.29493C3.84415 7 4.4586 7 5.6875 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M10.5 19.25V16.625" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 4.375H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 7H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 9.625H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 12.25H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+                    </svg>
+                    <span className='text-limegray '>Engineering</span>
+                  </div>
+                  <div>
+                    <ul className='text-white flex gap-[1.75rem]'>
+                      <li className='textLimegray'>324 employees</li>
+                      <li className='list-disc marker:text-lemongreen textLimegray'>95% attendance</li>
+                    </ul>
+                  </div>
+                </div>
+                {/* progressBar*/}
+                <div className='h-[5px] w-full bg-white rounded-[30px]'></div>
+              </div>
+              <div className='space-y-[1.1875rem]'>
+                <div className='between-center'>
+                  <div className='flex space-x-[1.375rem]'>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.25 19.25H1.75" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M14.875 19.25V5.25C14.875 3.60008 14.875 2.77512 14.3624 2.26257C13.8498 1.75 13.0249 1.75 11.375 1.75H9.625C7.97508 1.75 7.15012 1.75 6.63757 2.26257C6.125 2.77512 6.125 3.60008 6.125 5.25V19.25" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M18.375 19.25V10.0625C18.375 8.83356 18.375 8.21915 18.08 7.77775C17.9524 7.58667 17.7883 7.42261 17.5972 7.29493C17.1559 7 16.5414 7 15.3125 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M2.625 19.25V10.0625C2.625 8.83356 2.625 8.21915 2.91993 7.77775C3.04761 7.58667 3.21167 7.42261 3.40275 7.29493C3.84415 7 4.4586 7 5.6875 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M10.5 19.25V16.625" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 4.375H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 7H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 9.625H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 12.25H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+                    </svg>
+                    <span className='text-limegray '>Engineering</span>
+                  </div>
+                  <div>
+                    <ul className='text-white flex gap-[1.75rem]'>
+                      <li className='textLimegray'>324 employees</li>
+                      <li className='list-disc marker:text-lemongreen textLimegray'>95% attendance</li>
+                    </ul>
+                  </div>
+                </div>
+                {/* progressBar*/}
+                <div className='h-[5px] w-full bg-white rounded-[30px]'></div>
+              </div>
+                            <div className='space-y-[1.1875rem]'>
+                <div className='between-center'>
+                  <div className='flex space-x-[1.375rem]'>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.25 19.25H1.75" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M14.875 19.25V5.25C14.875 3.60008 14.875 2.77512 14.3624 2.26257C13.8498 1.75 13.0249 1.75 11.375 1.75H9.625C7.97508 1.75 7.15012 1.75 6.63757 2.26257C6.125 2.77512 6.125 3.60008 6.125 5.25V19.25" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M18.375 19.25V10.0625C18.375 8.83356 18.375 8.21915 18.08 7.77775C17.9524 7.58667 17.7883 7.42261 17.5972 7.29493C17.1559 7 16.5414 7 15.3125 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M2.625 19.25V10.0625C2.625 8.83356 2.625 8.21915 2.91993 7.77775C3.04761 7.58667 3.21167 7.42261 3.40275 7.29493C3.84415 7 4.4586 7 5.6875 7" stroke="#5D6150" stroke-width="1.3125"/>
+    <path d="M10.5 19.25V16.625" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 4.375H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 7H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 9.625H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+    <path d="M8.75 12.25H12.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
+                    </svg>
+                    <span className='text-limegray '>Engineering</span>
+                  </div>
+                  <div>
+                    <ul className='text-white flex gap-[1.75rem]'>
+                      <li className='textLimegray'>324 employees</li>
+                      <li className='list-disc marker:text-lemongreen textLimegray'>95% attendance</li>
+                    </ul>
+                  </div>
+                </div>
+                {/* progressBar*/}
+                <div className='h-[5px] w-full bg-white rounded-[30px]'></div>
+              </div>
+              
+            </div>
           </div>
         </div>
+        
 
 
 
@@ -183,7 +319,6 @@ const Dashboard = () => {
                   </div>
                   <div className='flex flex-col leading-4 gap-[4px] '>
                     <span className='text-accountColor text-nowrap'> Performance Review Deadline</span>
-                    <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
                     <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
                   </div>
                 </div>

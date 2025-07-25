@@ -50,7 +50,9 @@
   .cardActivitydash{
     @apply flex border-none rounded-[15px] bg-[rgba(190,229,50,0.03)] pl-[1.4375rem] pr-[0.5625rem] py-[1.125rem] gap-[22px]
   }
-
+  .textLimegray{
+    @apply text-[0.9375rem] text-limegray font-medium
+  }
 }
 
 .customBorder{
