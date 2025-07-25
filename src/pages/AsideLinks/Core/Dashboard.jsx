@@ -184,6 +184,7 @@ const Dashboard = () => {
                   <div className='flex flex-col leading-4 gap-[4px] '>
                     <span className='text-accountColor text-nowrap'> Performance Review Deadline</span>
                     <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
+                    <span className='text-white text-sm font-normal'>Q2 reviews due in 5 days</span>
                   </div>
                 </div>
               </div>
