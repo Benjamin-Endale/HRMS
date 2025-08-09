@@ -12,6 +12,7 @@
   --color-limegray:#5D6150;
   --color-blackish:#1B1F0E;
   --color-accountColor:#899072;
+  --color-input: #3F4236;
 }
 @layer components{
   .iconheader {
@@ -53,6 +54,9 @@
   .textLimegray{
     @apply text-[0.9375rem] text-limegray font-medium
   }
+  .textWhite{
+    @apply text-white text-xl font-semibold
+  }
 }
 
 .customBorder{
@@ -86,4 +90,13 @@
 
 .scrollBarDash::-webkit-scrollbar-thumb {
   background-color: #BEE532; 
+}
+
+.organizationCard{
+  @apply  border border-graysh/30 flex flex-col justify-center pl-[2rem] w-[21.0625rem] h-[13.8125rem] rounded-[1.375rem] cursor-pointer
+
+}
+
+.organizationCard1{
+  @apply border border-graysh/30 flex flex-col justify-center w-[21.0625rem] h-[13.8125rem] rounded-[1.375rem] cursor-pointer
 }
