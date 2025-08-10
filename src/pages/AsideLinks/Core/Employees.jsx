@@ -4,6 +4,7 @@ const Employees = () => {
 
 const navigate = useNavigate();
 
+
   return (
     <div className='font-semibold flex flex-col gap-[3.9375rem]'>
       {/* headerSearcharea */}
@@ -13,7 +14,7 @@ const navigate = useNavigate();
 <path d="M10.0625 18.375C14.6534 18.375 18.375 14.6534 18.375 10.0625C18.375 5.47163 14.6534 1.75 10.0625 1.75C5.47163 1.75 1.75 5.47163 1.75 10.0625C1.75 14.6534 5.47163 18.375 10.0625 18.375Z" stroke="#5D6150" stroke-width="1.3125"/>
 <path d="M17.5 17.5L19.25 19.25" stroke="#5D6150" stroke-width="1.3125" stroke-linecap="round"/>
             </svg>
-            <input type="text" placeholder="Search employee by name,email or ID" className='text-input  w-full h-full outline-0' name="" id="" />
+            <input type="search" placeholder="Search employee by name,email or ID" className='text-input  w-full h-full outline-0' name="" id="" />
           </div>
           <div className='w-[18.125rem] h-[3.4375rem]  flex items-center justify-center rounded-[0.625rem] bg-[#151812] gap-[4.6875rem]'>
             <div className='flex items-center gap-[0.625rem]'>
@@ -34,7 +35,7 @@ const navigate = useNavigate();
           <h1 className='textWhite'>Employees Directory</h1>
           <h4 className='textLimegray'>Manage employee profiles roles, and organization structure</h4>
         </div>
-        <button type="button" className='cursor-pointer ' onClick={()=>navigate('/addNewemployee')}>
+        <button type="button" className='cursor-pointer ' onClick={()=>navigate('/AddNewemployee')}>
           <div className='center-center w-[12.75rem] h-[3.125rem] rounded-[0.625rem] gap-[0.625rem] bg-lemongreen'>
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 20C16.0228 20 20.5 15.5228 20.5 10C20.5 4.47715 16.0228 0 10.5 0C4.97715 0 0.5 4.47715 0.5 10C0.5 15.5228 4.97715 20 10.5 20ZM11.25 7C11.25 6.58579 10.9142 6.25 10.5 6.25C10.0858 6.25 9.75 6.58579 9.75 7V9.25H7.5C7.08579 9.25 6.75 9.5858 6.75 10C6.75 10.4142 7.08579 10.75 7.5 10.75H9.75V13C9.75 13.4142 10.0858 13.75 10.5 13.75C10.9142 13.75 11.25 13.4142 11.25 13V10.75H13.5C13.9142 10.75 14.25 10.4142 14.25 10C14.25 9.5858 13.9142 9.25 13.5 9.25H11.25V7Z" fill="#0D0F11"/>

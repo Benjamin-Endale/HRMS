@@ -30,7 +30,8 @@ const Header = ({ readPath }) => {
     "training":"Training",
     "announcement":"Announcement",
     "assets":"Assets",
-    "addNewemployee": 'Add_New_Employee'
+    "AddNewemployee": 'Add_New_Employee',
+    "AddNewemployeesecond": 'Add_New_Employee'
   }
 
   // Safely access the right key

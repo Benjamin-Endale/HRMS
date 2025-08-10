@@ -13,6 +13,9 @@
   --color-blackish:#1B1F0E;
   --color-accountColor:#899072;
   --color-input: #3F4236;
+  --color-inputBack: #1D2015;
+  --color-formColor: #DFDFDF;
+  --color-limeLight: #899072;
 }
 @layer components{
   .iconheader {
@@ -54,8 +57,14 @@
   .textLimegray{
     @apply text-[0.9375rem] text-limegray font-medium
   }
+  .textFormColor{
+    @apply text-[0.9375rem] text-formColor font-medium
+  }
   .textWhite{
     @apply text-white text-xl font-semibold
+  }
+  .inputMod{
+    @apply bg-inputBack w-full h-[3.125rem] placeholder-input text-formColor rounded-[10px] pl-[1.1875rem]
   }
 }
 
@@ -99,4 +108,8 @@
 
 .organizationCard1{
   @apply border border-graysh/30 flex flex-col justify-center w-[21.0625rem] h-[13.8125rem] rounded-[1.375rem] cursor-pointer
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+filter: invert(100%) sepia(20%) saturate(7445%) hue-rotate(17deg) brightness(102%) contrast(86%);
 }
