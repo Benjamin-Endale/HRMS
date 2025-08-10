@@ -12,7 +12,8 @@ const Header = ({ readPath }) => {
     Performance:"",
     Training:"",
     Announcement:"",
-    Assets:""
+    Assets:"",
+    Add_New_Employee:"Enter employee details to create a new profile"
 
 
   }
@@ -28,7 +29,8 @@ const Header = ({ readPath }) => {
     "performance":"Performance",
     "training":"Training",
     "announcement":"Announcement",
-    "assets":"Assets"
+    "assets":"Assets",
+    "addNewemployee": 'Add_New_Employee'
   }
 
   // Safely access the right key
@@ -38,11 +40,11 @@ const Header = ({ readPath }) => {
     <div className='flex items-center w-full'>
       <header className='w-[calc(100%-3.0625rem)] flex items-center justify-between'>
         <div className='flex flex-col  leading-none space-y-[0.4375rem]'>
-          <h1 className='text-white text-[2rem] font-semibold'>{(keyMap[readPath]) === 'Leave_Management' ? 'Leave Managment' :  `${keyMap[readPath]}` }</h1>
-          <h4 className='text-limegray text-[1rem font-medium'>{description}</h4>
+          <h1 className='text-white text-[2rem] font-semibold'>{keyMap[readPath].replace(/_/g, ' ')}</h1>
+          <h4 className='text-limegray text-[15px] font-medium'>{description}</h4>
         </div>
         <div className='h-full w-[13.375rem] text-nowrap'>
-          <div className='flex items-center  justify-between'>
+          <div className='flex items-center justify-between'>
             <div className='w-[138px]'>
               <span className='text-accountColor font-medium'>Welcome, Benjamin</span>
             </div>
