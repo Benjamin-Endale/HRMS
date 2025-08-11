@@ -156,7 +156,7 @@ const Compensation = () => {
                     </div>
                 </form>
                 <div className='w-full h-[3.4375rem] my-[4rem] px-[10px]  flex gap-[2.5625rem]'>
-                    <button type="button" onClick={()=>navigate('/AddNewemployee')} className='w-[23.1875rem] border border-formColor text-formColor rounded-[10px] cursor-pointer'>Back</button>
+                    <button type="button" onClick={()=>navigate('/AddNewemployeesecond')} className='w-[23.1875rem] border border-formColor text-formColor rounded-[10px] cursor-pointer'>Back</button>
                     <button type="submit" onClick={()=>navigate('/System')} className='w-[23.1875rem] bg-lemongreen rounded-[10px] cursor-pointer'>Next</button>
                 </div>
             </div>
@@ -169,8 +169,8 @@ const Compensation = () => {
                     <span className='textFormColor'><strong>Important:</strong></span>
                 </div>
                 <div className='space-y-[2.25rem]'>
-                    <p className='textLimegray'>Provide accurate information about your current employment status, including your job title, employer’s name, and contact information. This helps establish your professional background and may be necessary for verification or eligibility purposes.</p>
-                    <p className='textLimegray'><strong className='text-formColor'>Tip:</strong> Make sure to list your employer’s official name and provide a valid work email or phone number if requested.</p>
+                    <p className='textLimegray'>Provide accurate information about your current employment status, including your job title, employer's name, and contact information. This helps establish your professional background and may be necessary for verification or eligibility purposes.</p>
+                    <p className='textLimegray'><strong className='text-formColor'>Tip:</strong> Make sure to list your employer's official name and provide a valid work email or phone number if requested.</p>
                 </div>
                 </div>           
             </div>
