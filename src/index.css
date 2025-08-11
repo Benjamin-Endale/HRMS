@@ -66,6 +66,9 @@
   .inputMod{
     @apply bg-inputBack w-full h-[3.125rem] placeholder-input text-formColor rounded-[10px] pl-[1.1875rem]
   }
+  .inputModfile{
+    @apply flex justify-center items-center border h-[3.125rem] w-full gap-[0.6875rem] bg-inputBack rounded-[10px] 
+  }
 }
 
 .customBorder{

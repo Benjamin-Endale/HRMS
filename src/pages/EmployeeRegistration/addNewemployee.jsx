@@ -18,7 +18,7 @@ const addNewemployee = () => {
             <div className='flex flex-col gap-[2.5rem]'>
                 {/* Header */}
                 <div className='flex items-center gap-[0.9375rem]'>
-                    <svg onClick={()=>navigate('/employees')} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={()=>navigate('/employees')} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <li className='textWhite list-decimal'>Personal Information</li>
@@ -39,114 +39,114 @@ const addNewemployee = () => {
             <div className='between gap-[12.25rem]'>
             {/* mainContent */}
                 <div className='w-[49.5625rem] h-[37.3125rem] overflow-y-auto scrollBarDash' > 
-                    <form action="" className='flex gap-[2.5625rem] pr-[10px]'>
-                    <div className=' flex flex-col w-[23.1875rem] gap-[35px]'>
-                        {/* firstName */}
-                        <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>First Name</label>
-                            <input type="text" placeholder='John' className='inputMod'/>
-                        </div>
-                        {/* dateOfbirth */}
-                        <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>Date Of Birth</label>
-                            <input type="date"   className='inputMod pr-[1.5625rem]'/>
-                        </div>
-                        {/*DropDown */}
-                        <div className='flex flex-col gap-[1rem] relative'>
-                            <label htmlFor="firstName" className='text-formColor'>Nationality</label>
-                            <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                                <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpen(!dropdownOpen)}>{selectedCountries}</button>
-                                <svg onClick={() => setDropdownOpen(!dropdownOpen)} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        <div className={`${dropdownOpen ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
-                            <ul className='flex flex-col  gap-[2.1875rem] h-full pt-[1.3125rem]'>
-                                {Countries.map(Count => (
-                                <li key={Count} className={`cursor-pointer w-full text-center ${selectedCountries === Count ? 'text-lemongreen font-bold' : ''}`}
-                                onClick={() => {
-                                    setSelectedCountries(Count)
-                                    setDropdownOpen(false)
-                                }}>
-                                {Count}
-                                </li>
-                            ))}
-                            </ul>
-                        </div>
-                        </div>
-                        <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>Email</label>
-                            <input type="email"  placeholder='example@gmail.com'  className='inputMod  pr-[1.5625rem]'/>
-                        </div>
-                        <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>Address</label>
-                            <input type="text"  placeholder='Bole,Addis abeba'  className='inputMod  pr-[1.5625rem]'/>
-                        </div>
-                    </div>
-                    <div className='w-[23.1875rem]'>
-                        <div className='flex flex-col w-full gap-[35px]'>
+                    <form action="" className='flex gap-[2.5625rem] px-[10px]'>
+                        <div className=' flex flex-col w-[23.1875rem] gap-[35px]'>
+                            {/* firstName */}
                             <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>Last Name</label>
-                            <input type="text" placeholder='John' className='inputMod'/>
+                                <label htmlFor="firstName" className='text-formColor'>First Name</label>
+                                <input type="text" placeholder='John' className='inputMod'/>
+                            </div>
+                            {/* dateOfbirth */}
+                            <div className='flex flex-col gap-[1rem]'>
+                                <label htmlFor="firstName" className='text-formColor'>Date Of Birth</label>
+                                <input type="date"   className='inputMod pr-[1.5625rem]'/>
                             </div>
                             {/*DropDown */}
                             <div className='flex flex-col gap-[1rem] relative'>
-                            <label htmlFor="firstName" className='text-formColor'>Gender</label>
-                            <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                                <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenG(!dropdownOpenG)}>{selectedGender}</button>
-                                <svg onClick={() => setDropdownOpenG(!dropdownOpenG)} className={`transition-transform duration-200 ${dropdownOpenG ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <label htmlFor="firstName" className='text-formColor'>Nationality</label>
+                                <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
+                                    <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpen(!dropdownOpen)}>{selectedCountries}</button>
+                                    <svg onClick={() => setDropdownOpen(!dropdownOpen)} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div className={`${dropdownOpen ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
+                                    <ul className='flex flex-col  gap-[2.1875rem] h-full pt-[1.3125rem]'>
+                                        {Countries.map(Count => (
+                                        <li key={Count} className={`cursor-pointer w-full text-center ${selectedCountries === Count ? 'text-lemongreen font-bold' : ''}`}
+                                        onClick={() => {
+                                            setSelectedCountries(Count)
+                                            setDropdownOpen(false)
+                                        }}>
+                                        {Count}
+                                        </li>
+                                    ))}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-[1rem]'>
+                                <label htmlFor="firstName" className='text-formColor'>Email</label>
+                                <input type="email"  placeholder='example@gmail.com'  className='inputMod  pr-[1.5625rem]'/>
+                            </div>
+                            <div className='flex flex-col gap-[1rem]'>
+                                <label htmlFor="firstName" className='text-formColor'>Address</label>
+                                <input type="text"  placeholder='Bole,Addis abeba'  className='inputMod  pr-[1.5625rem]'/>
+                            </div>
+                        </div>
+                        <div className='w-[23.1875rem]'>
+                            <div className='flex flex-col w-full gap-[35px]'>
+                                <div className='flex flex-col gap-[1rem]'>
+                                    <label htmlFor="firstName" className='text-formColor'>Last Name</label>
+                                    <input type="text" placeholder='John' className='inputMod'/>
+                                </div>
+                                {/*DropDown */}
+                                <div className='flex flex-col gap-[1rem] relative'>
+                                <label htmlFor="firstName" className='text-formColor'>Gender</label>
+                                <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
+                                    <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenG(!dropdownOpenG)}>{selectedGender}</button>
+                                    <svg onClick={() => setDropdownOpenG(!dropdownOpenG)} className={`transition-transform duration-200 ${dropdownOpenG ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div className={`${dropdownOpenG ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
+                                    <ul className='flex flex-col space-y-5 py-5 '>
+                                        {gender.map(Sex => (
+                                        <li key={Sex} className={`cursor-pointer w-full text-center ${selectedGender === Sex ? 'text-lemongreen font-bold' : ''}`}
+                                        onClick={() => {
+                                            setSelectedGender(Sex)
+                                            setDropdownOpenG(false)
+                                        }}>
+                                        {Sex}
+                                        </li>
+                                    ))}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-[1rem] relative'>
+                                <label htmlFor="firstName" className='text-formColor'>Martial</label>
+                                <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
+                                <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenM(!dropdownOpenM)}>{selectedMartial}</button>
+                                <svg onClick={() => setDropdownOpenM(!dropdownOpenM)} className={`transition-transform duration-200 ${dropdownOpenM ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                            </div>
-                            <div className={`${dropdownOpenG ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
+                                </div>
+                                <div className={`${dropdownOpenM ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
                                 <ul className='flex flex-col space-y-5 py-5 '>
-                                    {gender.map(Sex => (
-                                    <li key={Sex} className={`cursor-pointer w-full text-center ${selectedGender === Sex ? 'text-lemongreen font-bold' : ''}`}
+                                    {martial.map(mart => (
+                                    <li key={mart} className={`cursor-pointer w-full text-center ${selectedMartial === mart ? 'text-lemongreen font-bold' : ''}`}
                                     onClick={() => {
-                                        setSelectedGender(Sex)
-                                        setDropdownOpenG(false)
-                                    }}>
-                                    {Sex}
+                                        setSelectedMartial(mart)
+                                        setDropdownOpenM(false)
+                                        }}>
+                                        {mart}
                                     </li>
-                                ))}
+                                    ))}
                                 </ul>
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-[1rem]'>
+                                <label htmlFor="firstName" className='text-formColor'>Phone Number</label>
+                                <input type="text" placeholder='+251987654321' className='inputMod pr-[1.5625rem]'/>
+                            </div>
+                            <div className='flex flex-col gap-[1rem]'>
+                                <label htmlFor="firstName" className='text-formColor'>Emergancy Contant</label>
+                                <input type="text" placeholder='+251987654321' className='inputMod pr-[1.5625rem]'/>
+                            </div>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-[1rem] relative'>
-                            <label htmlFor="firstName" className='text-formColor'>Martial</label>
-                            <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                            <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenM(!dropdownOpenM)}>{selectedMartial}</button>
-                            <svg onClick={() => setDropdownOpenM(!dropdownOpenM)} className={`transition-transform duration-200 ${dropdownOpenM ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                            <div className={`${dropdownOpenM ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
-                            <ul className='flex flex-col space-y-5 py-5 '>
-                                {martial.map(mart => (
-                                <li key={mart} className={`cursor-pointer w-full text-center ${selectedMartial === mart ? 'text-lemongreen font-bold' : ''}`}
-                                onClick={() => {
-                                    setSelectedMartial(mart)
-                                    setDropdownOpenM(false)
-                                    }}>
-                                    {mart}
-                                </li>
-                                ))}
-                            </ul>
-                            </div>
-                        </div>
-                        <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>Phone Number</label>
-                            <input type="number" placeholder='+251987654321' className='inputMod pr-[1.5625rem]'/>
-                        </div>
-                        <div className='flex flex-col gap-[1rem]'>
-                            <label htmlFor="firstName" className='text-formColor'>Emergancy Contant</label>
-                            <input type="number" placeholder='+251987654321' className='inputMod pr-[1.5625rem]'/>
-                        </div>
-                        </div>
-                    </div>
                     </form>
-                    <div className='w-full h-[3.4375rem] mt-[2.5625rem]'>
-                    <button type="submit" onClick={()=>navigate('/AddNewemployeesecond')} className='w-full h-full bg-lemongreen rounded-[10px] cursor-pointer'>Next</button>
+                    <div className='w-[calc(100%-0.625rem)] h-[3.4375rem] mt-[2.5625rem] pl-[10px]'>
+                        <button type="submit" onClick={()=>navigate('/AddNewemployeesecond')} className='w-full  h-full  bg-lemongreen rounded-[10px] cursor-pointer'>Next</button>
                     </div>
                 </div>
             <div className='flex-1'>

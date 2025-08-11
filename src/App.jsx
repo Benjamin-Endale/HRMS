@@ -11,8 +11,10 @@ import LeaveManegment from './pages/AsideLinks/Core/LeaveManagment'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Assets from './pages/AsideLinks/Operation/Assets'
 import Announcement from './pages/AsideLinks/Operation/Announcement'
-import AddNewemployee from './pages/EmployeeRegistration/AddNewemployee'
+import AddNewemployee from './pages/EmployeeRegistration/addNewemployee'
 import AddNewemployeesecond from './pages/EmployeeRegistration/AddNewemployeesecond'
+import Compensation from './pages/EmployeeRegistration/Compensation'
+import System from './pages/EmployeeRegistration/System'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -28,6 +30,10 @@ const App = () => {
         {/* AddNewEmployee */}
         <Route path='AddNewemployee' element = {<AddNewemployee/>}/>
         <Route path='AddNewemployeesecond' element = {<AddNewemployeesecond/>}/>
+        <Route path='Compensation' element = {<Compensation/>}/>
+        <Route path='System' element = {<System/>}/>
+
+
         {/* TALENT */}
         <Route path='recruitment' element = {<Recruitment/>}/>
         <Route path='performance' element = {<Performance/>}/>

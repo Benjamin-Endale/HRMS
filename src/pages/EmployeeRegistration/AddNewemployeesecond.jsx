@@ -11,17 +11,17 @@ const AddNewemployeesecond = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('Department')
   const Employment = ['Full Time','Half Time','Remote']
   const Maneger = ['Manager','Manager','Manager']
-   const Department = ['Department','Department','Department']
+  const Department = ['Department','Department1','Department2']
   return (
     <div className='font-semibold flex flex-col gap-[4rem]'>
       {/* headerContainer */}
       <div className='flex flex-col gap-[2.5rem]'>
       {/* Header */}
         <div className='flex items-center gap-[0.9375rem]'>
-            <svg onClick={()=>navigate('/AddNewemployee')} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg onClick={()=>navigate('/AddNewemployee')} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <li className='textWhite list-decimal'>Employment Details</li>
+            <li className='textWhite list-none'>2. Employment Details</li>
         </div>
 
       {/* ProgressBar */}
@@ -36,8 +36,8 @@ const AddNewemployeesecond = () => {
       </div>
         <div className='between gap-[12.25rem]'>
           {/* mainContent */}
-          <div className='w-[49.5625rem] h-[37.3125rem] overflow-y-auto scrollBarDash' > 
-              <form action="" className='flex gap-[2.5625rem] pr-[10px]'>
+          <div className='w-[49.5625rem] h-[36.3125rem] overflow-y-auto scrollBarDash' > 
+              <form action="" className='flex gap-[2.5625rem] px-[10px]'>
                 <div className='flex flex-col w-[23.1875rem] gap-[35px]'>
                   <div className='flex flex-col gap-[1rem]'>
                       <label htmlFor="firstName" className='text-formColor'>Job Title</label>
@@ -53,18 +53,19 @@ const AddNewemployeesecond = () => {
                     </div>
                     <div className={`${dropdownOpen ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
                         <ul className='flex flex-col  gap-[2.1875rem] h-full pt-[1.3125rem]'>
-                            {Employment.map(Manege => (
-                            <li key={Manege} className={`cursor-pointer w-full text-center ${selectedManeger === Manege ? 'text-lemongreen font-bold' : ''}`}
+                            {Employment.map(Employ => (
+                            <li key={Employ} className={`cursor-pointer w-full text-center ${selectedEmployment === Employ ? 'text-lemongreen font-bold' : ''}`}
                             onClick={() => {
-                                selectedManeger(Manege)
+                                setSelectedEmployment(Employ)
                                 setDropdownOpen(false)
                             }}>
-                            {Manege}
+                            {Employ}
                             </li>
                         ))}
                         </ul>
                     </div>
                   </div>
+                  {/* Manager */}
                   <div className='flex flex-col gap-[1rem] relative'>
                     <label htmlFor="firstName" className='text-formColor'>Manager</label>
                     <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
@@ -75,13 +76,13 @@ const AddNewemployeesecond = () => {
                     </div>
                     <div className={`${dropdownOpenM ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
                         <ul className='flex flex-col  gap-[2.1875rem] h-full pt-[1.3125rem]'>
-                            {Maneger.map(Employ => (
-                            <li key={Employ} className={`cursor-pointer w-full text-center ${selectedEmployment === Employ ? 'text-lemongreen font-bold' : ''}`}
+                            {Maneger.map(Maneg => (
+                            <li key={Maneg} className={`cursor-pointer w-full text-center ${selectedManeger === Maneg ? 'text-lemongreen font-bold' : ''}`}
                             onClick={() => {
-                                setSelectedManeger(Employ)
+                                setSelectedManeger(Maneg)
                                 setDropdownOpenM(false)
                             }}>
-                            {Employ}
+                            {Maneg}
                             </li>
                         ))}
                         </ul>
@@ -92,12 +93,12 @@ const AddNewemployeesecond = () => {
                   <div className='flex flex-col gap-[1rem] relative'>
                     <label htmlFor="firstName" className='text-formColor'>Department</label>
                     <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                        <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpen(!dropdownOpenD)}>{selectedDepartment}</button>
-                        <svg onClick={() => setDropdownOpenM(!dropdownOpenD)} className={`transition-transform duration-200 ${dropdownOpenD ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenD(!dropdownOpenD)}>{selectedDepartment}</button>
+                        <svg onClick={() => setDropdownOpenD(!dropdownOpenD)} className={`transition-transform duration-200 ${dropdownOpenD ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div className={`${dropdownOpenM ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
+                    <div className={`${dropdownOpenD ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
                         <ul className='flex flex-col  gap-[2.1875rem] h-full pt-[1.3125rem]'>
                             {Department.map(Depmt => (
                             <li key={Depmt} className={`cursor-pointer w-full text-center ${selectedDepartment === Depmt ? 'text-lemongreen font-bold' : ''}`}
@@ -112,14 +113,14 @@ const AddNewemployeesecond = () => {
                     </div>
                   </div>
                   <div className='flex flex-col gap-[1rem]'>
-                      <label htmlFor="firstName" className='text-formColor'>Joining Date</label>
-                      <input type="date"   className='inputMod pr-[1.5625rem]'/>
+                    <label htmlFor="firstName" className='text-formColor'>Joining Date</label>
+                    <input type="date"   className='inputMod pr-[1.5625rem]'/>
                   </div>
                 </div>
               </form>
-              <div className='w-full h-[3.4375rem] mt-[4rem]  flex gap-[2.5625rem]'>
+              <div className='w-full h-[3.4375rem] mt-[4rem] flex gap-[2.5625rem]'>
                 <button type="button" onClick={()=>navigate('/AddNewemployee')} className='w-[23.1875rem] border border-formColor text-formColor rounded-[10px] cursor-pointer'>Back</button>
-                <button type="submit" onClick={()=>navigate('/')} className='w-[23.1875rem] bg-lemongreen rounded-[10px] cursor-pointer'>Next</button>
+                <button type="submit" onClick={()=>navigate('/Compensation')} className='w-[23.1875rem] bg-lemongreen rounded-[10px] cursor-pointer'>Next</button>
               </div>
           </div>
 
@@ -132,8 +133,8 @@ const AddNewemployeesecond = () => {
                 <span className='textFormColor'><strong>Important:</strong></span>
             </div>
             <div className='space-y-[2.25rem]'>
-                <p className='textLimegray'>Provide accurate information about your current employment status, including your job title, employer’s name, and contact information. This helps establish your professional background and may be necessary for verification or eligibility purposes.</p>
-                <p className='textLimegray'><strong className='text-formColor'>Tip:</strong> Make sure to list your employer’s official name and provide a valid work email or phone number if requested.</p>
+                <p className='textLimegray'>Provide accurate information about your current employment status, including your job title, employe's name, and contact information. This helps establish your professional background and may be necessary for verification or eligibility purposes.</p>
+                <p className='textLimegray'><strong className='text-formColor'>Tip:</strong> Make sure to list your employer's official name and provide a valid work email or phone number if requested.</p>
             </div>
             </div>           
         </div>

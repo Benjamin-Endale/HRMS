@@ -14,6 +14,7 @@ const Header = ({ readPath }) => {
     Announcement:"",
     Assets:"",
     Add_New_Employee:"Enter employee details to create a new profile"
+  
 
 
   }
@@ -31,7 +32,9 @@ const Header = ({ readPath }) => {
     "announcement":"Announcement",
     "assets":"Assets",
     "AddNewemployee": 'Add_New_Employee',
-    "AddNewemployeesecond": 'Add_New_Employee'
+    "AddNewemployeesecond": 'Add_New_Employee',
+    "Compensation": "Add_New_Employee",
+    "System": "Add_New_Employee"
   }
 
   // Safely access the right key
