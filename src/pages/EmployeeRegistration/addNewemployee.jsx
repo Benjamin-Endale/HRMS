@@ -91,27 +91,27 @@ const addNewemployee = () => {
                                 </div>
                                 {/*DropDown */}
                                 <div className='flex flex-col gap-[1rem] relative'>
-                                <label htmlFor="firstName" className='text-formColor'>Gender</label>
-                                <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                                    <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenG(!dropdownOpenG)}>{selectedGender}</button>
-                                    <svg onClick={() => setDropdownOpenG(!dropdownOpenG)} className={`transition-transform duration-200 ${dropdownOpenG ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                                    <label htmlFor="firstName" className='text-formColor'>Gender</label>
+                                    <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
+                                        <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenG(!dropdownOpenG)}>{selectedGender}</button>
+                                        <svg onClick={() => setDropdownOpenG(!dropdownOpenG)} className={`transition-transform duration-200 ${dropdownOpenG ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div className={`${dropdownOpenG ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
+                                        <ul className='flex flex-col space-y-5 py-5 '>
+                                            {gender.map(Sex => (
+                                            <li key={Sex} className={`cursor-pointer w-full text-center ${selectedGender === Sex ? 'text-lemongreen font-bold' : ''}`}
+                                            onClick={() => {
+                                                setSelectedGender(Sex)
+                                                setDropdownOpenG(false)
+                                            }}>
+                                            {Sex}
+                                            </li>
+                                        ))}
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div className={`${dropdownOpenG ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
-                                    <ul className='flex flex-col space-y-5 py-5 '>
-                                        {gender.map(Sex => (
-                                        <li key={Sex} className={`cursor-pointer w-full text-center ${selectedGender === Sex ? 'text-lemongreen font-bold' : ''}`}
-                                        onClick={() => {
-                                            setSelectedGender(Sex)
-                                            setDropdownOpenG(false)
-                                        }}>
-                                        {Sex}
-                                        </li>
-                                    ))}
-                                    </ul>
-                                </div>
-                            </div>
                             <div className='flex flex-col gap-[1rem] relative'>
                                 <label htmlFor="firstName" className='text-formColor'>Martial</label>
                                 <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
