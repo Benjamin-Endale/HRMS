@@ -13,9 +13,12 @@ const Header = ({ readPath }) => {
     Training:"",
     Announcement:"",
     Assets:"",
-    Add_New_Employee:"Enter employee details to create a new profile"
-  
-
+    Add_New_Employee:"Enter employee details to create a new profile",
+    All_Organizations: 'Manage all organizations in your HRMS platform',
+    Create_Organization: 'Set up a new organization in your HRMS platform',
+    Organization_Settings: 'Set up a new organization in your HRMS platform',
+    Super_Administrators: 'Manage system administrators and their permissions',
+    User_Statics: ''
 
   }
 
@@ -34,7 +37,12 @@ const Header = ({ readPath }) => {
     "AddNewemployee": 'Add_New_Employee',
     "AddNewemployeesecond": 'Add_New_Employee',
     "Compensation": "Add_New_Employee",
-    "System": "Add_New_Employee"
+    "System": "Add_New_Employee",
+    "allorganization": 'All_Organizations',
+    "createorganization": "Create_Organization",
+    "organizationsetting":'Organization_Settings',
+    'superadmin':'Super_Administrators',
+    'userstatics': 'User_Statics'
   }
 
   // Safely access the right key

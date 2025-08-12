@@ -16,6 +16,8 @@
   --color-inputBack: #1D2015;
   --color-formColor: #DFDFDF;
   --color-limeLight: #899072;
+  --color-yellowCust:#F7AB1E;
+  --color-Error:#E3694A;
 }
 @layer components{
   .iconheader {
@@ -41,7 +43,9 @@
   .cardDash{
     @apply w-[28rem] h-[14.8125rem] border border-none  rounded-[1.875rem] p-[2.1875rem]
   }
-
+  .carDash1{
+    @apply w-[29.375rem] h-[14.8125rem] border border-none  rounded-[1.875rem] p-[2.1875rem]
+  }
   .center-center{
     @apply flex justify-center items-center
   }
@@ -57,11 +61,14 @@
   .textLimegray{
     @apply text-[0.9375rem] text-limegray font-medium
   }
+  .textLimelight{
+    @apply text-[0.9375rem] text-limeLight font-medium
+  }
   .textFormColor{
     @apply text-[0.9375rem] text-formColor font-medium
   }
   .textWhite{
-    @apply text-white text-xl font-semibold
+    @apply text-formColor text-xl font-semibold
   }
   .inputMod{
     @apply bg-inputBack w-full h-[3.125rem] placeholder-input text-formColor rounded-[10px] pl-[1.1875rem]

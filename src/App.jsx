@@ -15,6 +15,11 @@ import AddNewemployee from './pages/EmployeeRegistration/addNewemployee'
 import AddNewemployeesecond from './pages/EmployeeRegistration/AddNewemployeesecond'
 import Compensation from './pages/EmployeeRegistration/Compensation'
 import System from './pages/EmployeeRegistration/System'
+import AllOrganization from './pages/SuperAdmin/Organization/AllOrganization'
+import CreateOrganization from './pages/SuperAdmin/Organization/CreateOrganization'
+import OrganizationSetting from './pages/SuperAdmin/Organization/OrganizationSettings'
+import SuperAdmin from './pages/SuperAdmin/UserManegment/SuperAdmin'
+import UserStatics from './pages/SuperAdmin/Report/UserStatics'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -43,7 +48,16 @@ const App = () => {
         <Route path='assets' element = {<Assets/>}/>
         <Route path='announcement' element = {<Announcement/>}/>
 
+        {/* SuperAdmin */}
+        <Route path='allorganization' element = {<AllOrganization/>}/>
+        <Route path='createorganization' element = {<CreateOrganization/>}/>
+        <Route path='organizationsetting' element = {<OrganizationSetting/>}/>
 
+        {/* User Managment */}
+        <Route path='superadmin' element = {<SuperAdmin/>}/>
+
+        {/* REPORT */}
+        <Route path='userstatics' element = {<UserStatics/>}/>
       </Route>
     )
   )

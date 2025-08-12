@@ -1,14 +1,12 @@
 import React , {useState} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { boolean } from 'zod'
-import Compensation from '../pages/EmployeeRegistration/Compensation'
-
 
 const MainBody = ({readPath}) => {
   return (
 
     <>
-        <aside className=' customBorder scrollBar w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] relative  pt-[3.5rem] overflow-y-auto font-semibold'>
+        <aside className='customBorder scrollBar w-[20.5rem]  h-screen flex flex-col gap-[4.25rem] relative  pt-[3.5rem] overflow-y-auto font-semibold'>
             <div className=' flex items-center gap-[1.25rem] pl-[2.75rem]'>
                 <img className='w-[2.0625rem] h-[2.3125rem]' src="/image/logo.png" alt="" />
                 <div >
