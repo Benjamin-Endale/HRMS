@@ -64,11 +64,16 @@
   .textLimelight{
     @apply text-[0.9375rem] text-limeLight font-medium
   }
-  .textFormColor{
-    @apply text-[0.9375rem] text-formColor font-medium
-  }
+
   .textWhite{
     @apply text-formColor text-xl font-semibold
+  }
+  .textFormColor{
+    @apply text-formColor text-xl font-semibold
+  }
+
+  .textFormColor1{
+    @apply text-formColor text-[1rem] font-semibold
   }
   .inputMod{
     @apply bg-inputBack w-full h-[3.125rem] placeholder-input text-formColor rounded-[10px] pl-[1.1875rem]

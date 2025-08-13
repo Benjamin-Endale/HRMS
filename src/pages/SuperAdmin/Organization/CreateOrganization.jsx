@@ -19,7 +19,7 @@ const CreateOrganization = () => {
     const timeZone = ['Ethiopia', 'USA', 'UK' , 'Sudan']
 
 
-    const [toggleOn, settoggleOn] = React.useState([false, false, false]);
+    const [toggleOn, settoggleOn] = useState([false, false, false]);
 
     const handleToggle = (index) => {
       settoggleOn((prev) => {
@@ -29,7 +29,7 @@ const CreateOrganization = () => {
         return newToggles;
       });
     };
-    const [toggleOn2, settoggleOn2] = React.useState([false, false, false]);
+    const [toggleOn2, settoggleOn2] = useState([false, false, false]);
 
     const handleToggle2 = (index) => {
       settoggleOn2((prev) => {
