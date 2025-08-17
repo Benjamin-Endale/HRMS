@@ -6,7 +6,7 @@ export default function AddAdmin({onClose}) {
     const [selectedRole, setSelectedRole] = useState('Employee')
     const Role = ['Employee','Admin','HR','CTO']
   return (
-    <div className='px-[3rem] pt-[2.875rem] space-y-[3.125rem] font-semibold w-full'>
+    <div className='px-[3rem] pt-[2.875rem] space-y-[3.125rem] font-semibold w-full '>
         <div className='flex justify-between'>
             <div className=''>
                 <h1 className='textFormColor'>Add Super Administrator</h1>

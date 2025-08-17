@@ -46,6 +46,9 @@
   .carDash1{
     @apply w-[29.375rem] h-[14.8125rem] border border-none  rounded-[1.875rem] p-[2.1875rem]
   }
+  .carDash2{
+    @apply w-[29.9375rem] h-[14.8125rem] border border-none  rounded-[1.875rem] p-[2.1875rem] bg-[rgba(190,229,50,0.05)]
+  }
   .center-center{
     @apply flex justify-center items-center
   }
@@ -60,6 +63,10 @@
   }
   .textLimegray{
     @apply text-[0.9375rem] text-limegray font-medium
+  }
+
+  .textLimegray1{
+    @apply text-[1rem] text-limegray font-medium
   }
   .textLimelight{
     @apply text-[0.9375rem] text-limeLight font-medium
@@ -78,6 +85,8 @@
   .inputMod{
     @apply bg-inputBack w-full h-[3.125rem] placeholder-input text-formColor rounded-[10px] pl-[1.1875rem]
   }
+
+  
   .inputModfile{
     @apply flex justify-center items-center border h-[3.125rem] w-full gap-[0.6875rem] bg-inputBack rounded-[10px] 
   }
@@ -110,6 +119,7 @@
 
 .scrollBarDash::-webkit-scrollbar-track {
   background-color: #1B1F0E; 
+
 }
 
 .scrollBarDash::-webkit-scrollbar-thumb {

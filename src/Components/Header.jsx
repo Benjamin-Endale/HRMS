@@ -8,8 +8,8 @@ const Header = ({ readPath }) => {
     Employee: "Manage employee profile, roles, and organizational structure.",
     Attendance: "Monitor employee attendance, working hours, and presence status.",
     Leave_Management: "Manage employee leave requests, balances, and policies.",
-    Recruitment: "",
-    Performance:"",
+    Recruitment_and_ATS: "Manage job postings, candidates, and hiring process",
+    Performance:"Track goals, conduct reviews, and manage employee performance.",
     Training:"",
     Announcement:"",
     Assets:"",
@@ -29,7 +29,6 @@ const Header = ({ readPath }) => {
     "employees": "Employee",
     "attendance": "Attendance",
     "leaveManagment": "Leave_Management",
-    "recruitment": "Recruitment",
     "performance":"Performance",
     "training":"Training",
     "announcement":"Announcement",
@@ -42,7 +41,10 @@ const Header = ({ readPath }) => {
     "createorganization": "Create_Organization",
     "organizationsetting":'Organization_Settings',
     'superadmin':'Super_Administrators',
-    'userstatics': 'User_Statics'
+    'userstatics': 'User_Statics',
+    'jobposting' : "Recruitment_and_ATS",
+    "candidates": "Recruitment_and_ATS",
+    "interviews": "Recruitment_and_ATS"
   }
 
   // Safely access the right key
@@ -52,7 +54,7 @@ const Header = ({ readPath }) => {
     <div className='flex items-center w-full'>
       <header className='w-[calc(100%-3.0625rem)] flex items-center justify-between'>
         <div className='flex flex-col  leading-none space-y-[0.4375rem]'>
-          <h1 className='text-white text-[2rem] font-semibold'>{keyMap[readPath].replace(/_/g, ' ')}</h1>
+          <h1 className='text-white text-[2rem] font-semibold'>{keyMap[readPath].replace(/_/g, ' ')} </h1>
           <h4 className='text-limegray text-[15px] font-medium'>{description}</h4>
         </div>
         <div className='h-full w-[13.375rem] text-nowrap'>

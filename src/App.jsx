@@ -1,10 +1,10 @@
 import React from 'react'
 import Rootlayout from './layout/rootlayout'
+import Superlayout from './layout/superlayout'
 import Dashboard from './pages/AsideLinks/Core/Dashboard'
 import Organization from './pages/AsideLinks/Core/Organization'
 import Employees from './pages/AsideLinks/Core/Employees'
 import Attendance from './pages/AsideLinks/Core/Attendance'
-import Recruitment from './pages/AsideLinks/Talent/Recruitment'
 import Performance from  './pages/AsideLinks/Talent/Performance'
 import Training from './pages/AsideLinks/Talent/Training'
 import LeaveManegment from './pages/AsideLinks/Core/LeaveManagment'
@@ -20,45 +20,62 @@ import CreateOrganization from './pages/SuperAdmin/Organization/CreateOrganizati
 import OrganizationSetting from './pages/SuperAdmin/Organization/OrganizationSettings'
 import SuperAdmin from './pages/SuperAdmin/UserManegment/SuperAdmin'
 import UserStatics from './pages/SuperAdmin/Report/UserStatics'
+import Thirdlayout from './layout/thirdLayout'
+import Candidates from './pages/Recruitment/Candidates'
+import Interviews from './pages/Recruitment/Interviews'
+import Jobposting from './pages/Recruitment/Jobposting'
+
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element = {<Rootlayout/>}>
+      <>
+        <Route path='/' element = {<Rootlayout/>}>
 
-        <Route index element = {<Dashboard/>} />
-        <Route path='organization' element = {<Organization/>}/>
-        <Route path='employees' element = {<Employees/>}/>
-        <Route path='attendance' element = {<Attendance/>}/>
-        <Route path='leaveManagment' element = {<LeaveManegment/>}/>
-        
-        {/* AddNewEmployee */}
-        <Route path='AddNewemployee' element = {<AddNewemployee/>}/>
-        <Route path='AddNewemployeesecond' element = {<AddNewemployeesecond/>}/>
-        <Route path='Compensation' element = {<Compensation/>}/>
-        <Route path='System' element = {<System/>}/>
+          <Route index element = {<Dashboard/>} />
+          <Route path='organization' element = {<Organization/>}/>
+          <Route path='employees' element = {<Employees/>}/>
+          <Route path='attendance' element = {<Attendance/>}/>
+          <Route path='leaveManagment' element = {<LeaveManegment/>}/>
+          
+          {/* AddNewEmployee */}
+          <Route path='AddNewemployee' element = {<AddNewemployee/>}/>
+          <Route path='AddNewemployeesecond' element = {<AddNewemployeesecond/>}/>
+          <Route path='Compensation' element = {<Compensation/>}/>
+          <Route path='System' element = {<System/>}/>
 
 
-        {/* TALENT */}
-        <Route path='recruitment' element = {<Recruitment/>}/>
-        <Route path='performance' element = {<Performance/>}/>
-        <Route path='training' element = {<Training/>}/>
 
-        {/* OPERATION */}
-        <Route path='assets' element = {<Assets/>}/>
-        <Route path='announcement' element = {<Announcement/>}/>
+          {/* OPERATION */}
+          <Route path='assets' element = {<Assets/>}/>
+          <Route path='announcement' element = {<Announcement/>}/>
+        </Route>
+        <Route path='/' element = {<Superlayout/>}>
+          {/* SuperAdmin */}
+          <Route path='allorganization' element = {<AllOrganization/>}/>
+          <Route path='createorganization' element = {<CreateOrganization/>}/>
+          <Route path='organizationsetting' element = {<OrganizationSetting/>}/>
 
-        {/* SuperAdmin */}
-        <Route path='allorganization' element = {<AllOrganization/>}/>
-        <Route path='createorganization' element = {<CreateOrganization/>}/>
-        <Route path='organizationsetting' element = {<OrganizationSetting/>}/>
+          {/* User Managment */}
+          <Route path='superadmin' element = {<SuperAdmin/>}/>
 
-        {/* User Managment */}
-        <Route path='superadmin' element = {<SuperAdmin/>}/>
+          {/* REPORT */}
+          <Route path='userstatics' element = {<UserStatics/>}/>
+        </Route>    
+        <Route  element = {<Thirdlayout/>}>
+          {/* TALENT */}
+          <Route path='performance' element = {<Performance/>}/>
+          <Route path='training' element = {<Training/>}/>
 
-        {/* REPORT */}
-        <Route path='userstatics' element = {<UserStatics/>}/>
-      </Route>
+
+          {/*Recruitment*/}
+          <Route path='candidates' element = {<Candidates/>}/>
+          <Route path='interviews' element = {<Interviews/>}/>
+          <Route path='jobposting' element = {<Jobposting/>}/>
+        </Route>     
+
+      </>
+
     )
   )
 

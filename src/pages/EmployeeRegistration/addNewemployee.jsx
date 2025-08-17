@@ -1,16 +1,11 @@
 import React , {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import { Dropdown } from '../../Components/DropDown';
 
 const addNewemployee = () => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [dropdownOpenG, setDropdownOpenG] = useState(false);
-    const [dropdownOpenM, setDropdownOpenM] = useState(false);
-    const [selectedCountries, setSelectedCountries] = useState('Ethiopia')
-    const [selectedGender, setSelectedGender] = useState('Male')
-    const [selectedMartial, setSelectedMartial] = useState('Unmarried')
-    const Countries = ['Ethiopia', 'Kenya', 'Nigeria','South Africa','South Africa','South Africa','South Africa']
-    const gender = ['Male','Female']
-    const martial = ['Married','Divorce','Unmarried']
+    const [selectedCountries, setSelectedCountries] = useState()
+    const [selectedGender, setSelectedGender] = useState()
+    const [selectedMartial, setSelectedMartial] = useState()
     const navigate = useNavigate();
     return (
         <div className='font-semibold flex flex-col gap-[4rem]'>
@@ -52,27 +47,15 @@ const addNewemployee = () => {
                                 <input type="date"   className='inputMod pr-[1.5625rem]'/>
                             </div>
                             {/*DropDown */}
-                            <div className='flex flex-col gap-[1rem] relative'>
-                                <label htmlFor="firstName" className='text-formColor'>Nationality</label>
-                                <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                                    <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpen(!dropdownOpen)}>{selectedCountries}</button>
-                                    <svg onClick={() => setDropdownOpen(!dropdownOpen)} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div className={`${dropdownOpen ? 'flex' : 'hidden'} bg-inputBack rounded-[10px] h-[11.25rem]  w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight scrollBarDash overflow-y-auto `}>
-                                    <ul className='flex flex-col  gap-[2.1875rem] h-full pt-[1.3125rem]'>
-                                        {Countries.map(Count => (
-                                        <li key={Count} className={`cursor-pointer w-full text-center ${selectedCountries === Count ? 'text-lemongreen font-bold' : ''}`}
-                                        onClick={() => {
-                                            setSelectedCountries(Count)
-                                            setDropdownOpen(false)
-                                        }}>
-                                        {Count}
-                                        </li>
-                                    ))}
-                                    </ul>
-                                </div>
+                            <div>
+                                <Dropdown
+                                    label="Nationality"
+                                    options={['Ethiopia', 'Kenya', 'Nigeria','South Africa','South Africa']}
+                                    selected={selectedCountries}
+                                    onSelect={setSelectedCountries}
+                                    placeholder="Select Nationality"
+                                    className=''
+                                />
                             </div>
                             <div className='flex flex-col gap-[1rem]'>
                                 <label htmlFor="firstName" className='text-formColor'>Email</label>
@@ -90,50 +73,26 @@ const addNewemployee = () => {
                                     <input type="text" placeholder='John' className='inputMod'/>
                                 </div>
                                 {/*DropDown */}
-                                <div className='flex flex-col gap-[1rem] relative'>
-                                    <label htmlFor="firstName" className='text-formColor'>Gender</label>
-                                    <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                                        <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenG(!dropdownOpenG)}>{selectedGender}</button>
-                                        <svg onClick={() => setDropdownOpenG(!dropdownOpenG)} className={`transition-transform duration-200 ${dropdownOpenG ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </div>
-                                    <div className={`${dropdownOpenG ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
-                                        <ul className='flex flex-col space-y-5 py-5 '>
-                                            {gender.map(Sex => (
-                                            <li key={Sex} className={`cursor-pointer w-full text-center ${selectedGender === Sex ? 'text-lemongreen font-bold' : ''}`}
-                                            onClick={() => {
-                                                setSelectedGender(Sex)
-                                                setDropdownOpenG(false)
-                                            }}>
-                                            {Sex}
-                                            </li>
-                                        ))}
-                                        </ul>
-                                    </div>
+                                <div>
+                                    <Dropdown
+                                        label="Gender"
+                                        options={['Male', 'Female']}
+                                        selected={selectedGender}
+                                        onSelect={setSelectedGender}
+                                        placeholder="Select Gender"
+                                        className=''
+                                    />
                                 </div>
-                            <div className='flex flex-col gap-[1rem] relative'>
-                                <label htmlFor="firstName" className='text-formColor'>Martial</label>
-                                <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
-                                <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenM(!dropdownOpenM)}>{selectedMartial}</button>
-                                <svg onClick={() => setDropdownOpenM(!dropdownOpenM)} className={`transition-transform duration-200 ${dropdownOpenM ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 9L12 15L5 9" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <div>
+                                    <Dropdown
+                                        label="Martial"
+                                        options={['Married','Divorce','Unmarried']}
+                                        selected={selectedMartial}
+                                        onSelect={setSelectedMartial}
+                                        placeholder="Select Martial"
+                                        className=''
+                                    />
                                 </div>
-                                <div className={`${dropdownOpenM ? 'flex' : 'hidden'} bg-inputBack rounded-[10px]   w-full top-[6.3125rem] absolute z-10 text-formColor flex-col center-center border border-limeLight`}>
-                                <ul className='flex flex-col space-y-5 py-5 '>
-                                    {martial.map(mart => (
-                                    <li key={mart} className={`cursor-pointer w-full text-center ${selectedMartial === mart ? 'text-lemongreen font-bold' : ''}`}
-                                    onClick={() => {
-                                        setSelectedMartial(mart)
-                                        setDropdownOpenM(false)
-                                        }}>
-                                        {mart}
-                                    </li>
-                                    ))}
-                                </ul>
-                                </div>
-                            </div>
                             <div className='flex flex-col gap-[1rem]'>
                                 <label htmlFor="firstName" className='text-formColor'>Phone Number</label>
                                 <input type="text" placeholder='+251987654321' className='inputMod pr-[1.5625rem]'/>

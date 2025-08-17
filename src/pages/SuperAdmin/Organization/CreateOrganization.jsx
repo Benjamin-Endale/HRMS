@@ -1,4 +1,7 @@
 import React , {useState} from 'react'
+import * as z from 'zod'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
 const CreateOrganization = () => {
     const [dropdownOpenI, setDropdownOpenI] = useState(false);
@@ -39,6 +42,34 @@ const CreateOrganization = () => {
         return newToggles;
       });
     };
+
+
+
+
+
+    const validationScheme = z.object({
+      organizationName : z.string(),
+      Industry: z.enum(['Industry1','Industry2']),
+      Domain: z.string(),
+      companySize: z.number(),
+    })
+
+    const {register,handleSubmit,formState: { errors }} = useForm({
+    resolver: zodResolver(validationScheme)
+  });
+
+  const onSubmit = (data) => {
+  console.log("✅ Valid data:", data);
+  };
+
+
+
+
+
+
+
+
+
   return (
     <div className='flex gap-[7.0625rem] font-semibold'>
       {/* firstSection */}
@@ -58,18 +89,21 @@ const CreateOrganization = () => {
             </div>
             {/* FormSection */}
             <div>
-              <form action="" className='space-y-[2.875rem]'>
+
+
+              
+              <form onSubmit={handleSubmit(onSubmit)} action="" className='space-y-[2.875rem]'>
                 <div className='flex gap-[2.1875rem]'>
                   {/* firstForm */}
                   <div className='w-[20.1875rem] flex flex-col gap-[2.875rem]'>
                     {/* OrganizationName */}
                     <div className='flex flex-col gap-[1rem]'>
                       <label htmlFor="organizationName" className='text-formColor'>Organization Name*</label>
-                      <input type="text" placeholder='Enter Organization Name' className='inputMod' />
+                      <input {...register('organizationName')} type="text" placeholder='Enter Organization Name' className='inputMod' />
                     </div>
                     {/* Insustry */}
                     <div className='flex flex-col gap-[1rem] relative'>
-                        <label htmlFor="firstName" className='text-formColor'>Industry</label>
+                        <label htmlFor="Industry" className='text-formColor'>Industry</label>
                         <div className='inputMod flex items-center justify-between pr-[1.5625rem]' >
                             <button type="button" className='text-formColor text-left' onClick={() => setDropdownOpenI(!dropdownOpenI)}>{selectedIndustry}</button>
                             <svg onClick={() => setDropdownOpenI(!dropdownOpenI)} className={`transition-transform duration-200 ${dropdownOpenI ? 'rotate-180' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +130,7 @@ const CreateOrganization = () => {
                     {/* Domain */}
                     <div className='flex flex-col gap-[1rem]'>
                       <label htmlFor="domain " className='text-formColor'>Domain*</label>
-                      <input id='domain' type="text" placeholder='Enter Organization Domain' className='inputMod' />
+                      <input {...register('Domain')}  id='domain' type="text" placeholder='Enter Organization Domain' className='inputMod' />
                     </div>
                     {/* Company Size */}
                     <div className='flex flex-col gap-[1rem] relative'>
@@ -239,7 +273,15 @@ const CreateOrganization = () => {
             </div>
             <div className='space-y-[2.875rem]'>
               <div>
-                <form action="" className='space-y-[2.875rem]'>
+
+
+
+
+
+
+
+
+                <form  action="" className='space-y-[2.875rem]'>
                   <div className='flex gap-[2.1875rem]'>
                     {/* Country */}
                     <div className='w-[20.1875rem]'>
@@ -294,6 +336,21 @@ const CreateOrganization = () => {
                     </div>
                   </div>
                 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               </div>
             </div>
           </div>
