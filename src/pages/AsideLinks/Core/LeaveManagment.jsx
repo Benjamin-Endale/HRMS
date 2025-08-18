@@ -161,7 +161,7 @@ const Leave_Management = () => {
                 <h4 className='text-limegray'>Annual Leave</h4>
               </td>
               <td className='pt-[2.25rem]'>
-                <h4 className='text-limegray'>5 days</h4>
+                <h4 className='text-limegray'>5 days</h4>
                 </td>
               <td className='pt-[2.25rem]'>
                 <h4 className='text-limegray'>Family vacation</h4>

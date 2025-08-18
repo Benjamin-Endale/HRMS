@@ -99,6 +99,14 @@
   border-bottom: none;
 }
 
+.customBorder1{
+  border: 1px solid rgba(93, 97, 80, 1) ;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+
 
 .scrollBar::-webkit-scrollbar {
   width: 1px;
@@ -125,6 +133,16 @@
 .scrollBarDash::-webkit-scrollbar-thumb {
   background-color: #BEE532; 
 }
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: hidden; 
+}
+.scrollbar-hide {
+  scrollbar-width: none;     
+}
+
 
 .organizationCard{
   @apply  border border-graysh/30 flex flex-col justify-center pl-[2rem] w-[21.0625rem] h-[13.8125rem] rounded-[1.375rem] cursor-pointer

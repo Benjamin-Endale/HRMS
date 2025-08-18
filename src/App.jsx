@@ -11,7 +11,7 @@ import LeaveManegment from './pages/AsideLinks/Core/LeaveManagment'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Assets from './pages/AsideLinks/Operation/Assets'
 import Announcement from './pages/AsideLinks/Operation/Announcement'
-import AddNewemployee from './pages/EmployeeRegistration/addNewemployee'
+import AddNewemployee from './pages/EmployeeRegistration/AddNewemployee'
 import AddNewemployeesecond from './pages/EmployeeRegistration/AddNewemployeesecond'
 import Compensation from './pages/EmployeeRegistration/Compensation'
 import System from './pages/EmployeeRegistration/System'
@@ -24,6 +24,10 @@ import Thirdlayout from './layout/thirdLayout'
 import Candidates from './pages/Recruitment/Candidates'
 import Interviews from './pages/Recruitment/Interviews'
 import Jobposting from './pages/Recruitment/Jobposting'
+import FeedBack from './pages/Performance/FeedBack'
+import Goals from './pages/Performance/Goals'
+import Overview from './pages/Performance/Overview'
+import Reviews from './pages/Performance/Reviews'
 
 
 const App = () => {
@@ -72,6 +76,13 @@ const App = () => {
           <Route path='candidates' element = {<Candidates/>}/>
           <Route path='interviews' element = {<Interviews/>}/>
           <Route path='jobposting' element = {<Jobposting/>}/>
+
+
+          {/*Performance*/}
+          <Route path='feedBack' element = {<FeedBack/>}/>
+          <Route path='goals' element = {<Goals/>}/>
+          <Route path='overview' element = {<Overview/>}/>
+          <Route path='reviews' element = {<Reviews/>}/>
         </Route>     
 
       </>

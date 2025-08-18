@@ -23,7 +23,7 @@ const Thirdlayout = () => {
                 <div>
                     <Reclayout readPath={readPath}/>
                 </div>
-                <div className='w-[calc(100%-2.75rem)]'>
+                <div className='w-[calc(100%-2.75rem)] '>
                     <Outlet />
                 </div>
             </div>

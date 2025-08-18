@@ -6,12 +6,20 @@ const RecLayout = ({ readPath }) => {
   const navigate = useNavigate()
   const location = useLocation()
 
-    const navItems = [
+    const NavRecruitment = [
     { label: "Job Posting", path: "/jobposting" },
     { label: "Candidates", path: "/candidates" },
     { label: "Interviews", path: "/interviews" }
   ]
 
+
+  
+    const NavPerformance = [
+    { label: "Overview", path: "/overview" },
+    { label: "Goals & KPIs", path: "/goals" },
+    { label: "Reviews ", path: "/reviews" },
+    { label: "360 Feedback ", path: "/feedBack" }
+  ]
 
 
   return (
@@ -74,7 +82,7 @@ const RecLayout = ({ readPath }) => {
                 </div>
             </div>
             <div className="center-center gap-[1.75rem]">
-                {navItems.map(item => (
+                {NavRecruitment.map(item => (
                 <div
                     key={item.path}
                     onClick={() => navigate(item.path)}
@@ -86,7 +94,7 @@ const RecLayout = ({ readPath }) => {
                 
             </div>
         </div>
-        <div className={`${readPath === 'performance' ? 'block' : 'hidden'} flex flex-col gap-[3.3125rem]`}>
+        <div className={`${readPath === 'performance' || readPath === 'feedBack' || readPath === 'goals' || readPath === 'overview' || readPath === 'reviews' ? 'block' : 'hidden'} cursor-pointer flex flex-col gap-[3.3125rem]`}>
             {/* InformationContainers */}
             <div className='flex gap-[1.25rem]'>
             <div className='carDash2'>
@@ -142,6 +150,18 @@ const RecLayout = ({ readPath }) => {
                 </div>
                 </div>
             </div>
+            </div>
+            <div className="center-center gap-[1.75rem]">
+                {NavPerformance.map(item1 => (
+                <div
+                    key={item1.path}
+                    onClick={() => navigate(item1.path)}
+                    className={`w-[8.875rem]  text-center py-[0.875rem] relative px-[1.875rem]  text-nowrap  ${location.pathname === item1.path ? 'text-lemongreen' : 'textLimegray1'}`}>
+                    {item1.label}
+                    <div className={`${location.pathname === item1.path ? 'absolute left-0 h-[3px] w-full bottom-0 rounded-[0.375rem] bg-lemongreen' : ''}`}></div>
+                </div>
+                ))}
+                
             </div>
         </div>
     </div>

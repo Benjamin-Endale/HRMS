@@ -9,7 +9,7 @@ const Header = ({ readPath }) => {
     Attendance: "Monitor employee attendance, working hours, and presence status.",
     Leave_Management: "Manage employee leave requests, balances, and policies.",
     Recruitment_and_ATS: "Manage job postings, candidates, and hiring process",
-    Performance:"Track goals, conduct reviews, and manage employee performance.",
+    Performance_Management:"Track goals, conduct reviews, and manage employee performance.",
     Training:"",
     Announcement:"",
     Assets:"",
@@ -29,7 +29,7 @@ const Header = ({ readPath }) => {
     "employees": "Employee",
     "attendance": "Attendance",
     "leaveManagment": "Leave_Management",
-    "performance":"Performance",
+    "performance":"Performance_Management",
     "training":"Training",
     "announcement":"Announcement",
     "assets":"Assets",
@@ -44,7 +44,11 @@ const Header = ({ readPath }) => {
     'userstatics': 'User_Statics',
     'jobposting' : "Recruitment_and_ATS",
     "candidates": "Recruitment_and_ATS",
-    "interviews": "Recruitment_and_ATS"
+    "interviews": "Recruitment_and_ATS",
+    'overview': 'Performance_Management',
+    'goals': 'Performance_Management',
+    'reviews': 'Performance_Management',
+    'feedBack': 'Performance_Management'
   }
 
   // Safely access the right key
