@@ -5,7 +5,6 @@ import Dashboard from './pages/AsideLinks/Core/Dashboard'
 import Organization from './pages/AsideLinks/Core/Organization'
 import Employees from './pages/AsideLinks/Core/Employees'
 import Attendance from './pages/AsideLinks/Core/Attendance'
-import Performance from  './pages/AsideLinks/Talent/Performance'
 import Training from './pages/AsideLinks/Talent/Training'
 import LeaveManegment from './pages/AsideLinks/Core/LeaveManagment'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
@@ -28,6 +27,10 @@ import FeedBack from './pages/Performance/FeedBack'
 import Goals from './pages/Performance/Goals'
 import Overview from './pages/Performance/Overview'
 import Reviews from './pages/Performance/Reviews'
+import Feedback from './pages/Traning/Feedback'
+import Enrolment from './pages/Traning/Enrolment'
+import Program from './pages/Traning/Program'
+import OverviewTraining from './pages/Traning/OverviewTraining'
 
 
 const App = () => {
@@ -83,6 +86,15 @@ const App = () => {
           <Route path='goals' element = {<Goals/>}/>
           <Route path='overview' element = {<Overview/>}/>
           <Route path='reviews' element = {<Reviews/>}/>
+
+
+
+          
+          {/*Traning*/}
+          <Route path='feedBackTraning' element = {<Feedback/>}/>
+          <Route path='enrolment' element = {<Enrolment/>}/>
+          <Route path='program' element = {<Program/>}/>
+          <Route path='overviewtraining' element = {<OverviewTraining/>}/>
         </Route>     
 
       </>

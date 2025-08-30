@@ -5,13 +5,14 @@ const Dashboard = () => {
 const departments = [
   { name: "Engineering", total: 50, attended: 12 },
   { name: "Marketing", total: 30, attended: 25 },
-  { name: "HR", total: 20, attended: 12 },
+  { name: "HR", total: 400, attended: 375 },
   { name: "Sales", total: 40, attended: 2 },
   { name: "Finance", total: 25, attended: 20 },
 ];
 
   return (
     <>
+    
       {/* mainContainer */}
       <div className='flex gap-[3.25rem]'>
         {/* firstSection */}

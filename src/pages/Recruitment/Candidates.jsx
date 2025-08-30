@@ -35,7 +35,7 @@ const Candidates = () => {
       {/* Table */}
       <div>
         <table className='w-full pt-[4rem]'>
-          <thead className='border-b border-limegray'>
+          <thead className='tableBordercolor'>
             <tr className='textFormColor1'>
               <th className='pb-[0.8125rem] pr-[7.5rem]'>Candidate</th>
               <th className='pb-[0.8125rem] pr-[7.875rem]'>Contact Information </th>

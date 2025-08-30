@@ -11,6 +11,6 @@ export default function ModalContainerSchedule({open,children}) {
             <div>{children}</div>
         </div>
     </>,
-    document.getElementById('addSchedule')
+    document.getElementById('addModal')
   )
 }

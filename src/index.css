@@ -18,6 +18,7 @@
   --color-limeLight: #899072;
   --color-yellowCust:#F7AB1E;
   --color-Error:#E3694A;
+  --color-bgColor:rgba(190, 229, 50, 0.05);
 }
 @layer components{
   .iconheader {
@@ -72,6 +73,10 @@
     @apply text-[0.9375rem] text-limeLight font-medium
   }
 
+  .tableBordercolor{
+    @apply border-b border-[rgba(93,97,80,0.3)]
+  }
+
   .textWhite{
     @apply text-formColor text-xl font-semibold
   }
@@ -82,6 +87,11 @@
   .textFormColor1{
     @apply text-formColor text-[1rem] font-semibold
   }
+
+  .textLimeGray1{
+    @apply text-limegray text-[1rem] font-semibold
+  }
+
   .inputMod{
     @apply bg-inputBack w-full h-[3.125rem] placeholder-input text-formColor rounded-[10px] pl-[1.1875rem]
   }
@@ -100,7 +110,7 @@
 }
 
 .customBorder1{
-  border: 1px solid rgba(93, 97, 80, 1) ;
+  border: 1px solid rgba(93, 97, 80, 0.13) ;
   border-left: none;
   border-top: none;
   border-right: none;
@@ -126,12 +136,12 @@
 }
 
 .scrollBarDash::-webkit-scrollbar-track {
-  background-color: #1B1F0E; 
+  background-color: #5D6150; 
 
 }
 
 .scrollBarDash::-webkit-scrollbar-thumb {
-  background-color: #BEE532; 
+  background-color: #333C2D; 
 }
 
 
@@ -155,4 +165,8 @@
 
 input[type="date"]::-webkit-calendar-picker-indicator {
 filter: invert(100%) sepia(20%) saturate(7445%) hue-rotate(17deg) brightness(102%) contrast(86%);
+}
+
+.backgroundColor{
+  @apply bg-[rgba(190,229,50,0.05)]
 }

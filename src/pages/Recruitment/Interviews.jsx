@@ -30,7 +30,7 @@ const Interviews = () => {
       {/* table */}
       <div>
         <table>
-          <thead className='border-b border-limegray'>
+          <thead className='tableBordercolor'>
             <tr className='textFormColor1'>
               <th className='pb-[0.8125rem] pr-[7.125rem]'>Candidate</th>
               <th className='pb-[0.8125rem] pr-[13.9375rem]'>Position</th>

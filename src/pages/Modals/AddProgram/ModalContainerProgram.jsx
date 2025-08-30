@@ -1,7 +1,7 @@
 import React from 'react'
 import reactDom from 'react-dom'
 
-export default function ModalContainerJob({open,children}) {
+export default function ModalContainerProgram({open,children}) {
     if(!open){return null}
   return reactDom.createPortal(
     <>

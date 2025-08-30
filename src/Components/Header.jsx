@@ -11,15 +11,15 @@ const Header = ({ readPath }) => {
     Recruitment_and_ATS: "Manage job postings, candidates, and hiring process",
     Performance_Management:"Track goals, conduct reviews, and manage employee performance.",
     Training:"",
-    Announcement:"",
+    Announcements_and_Notifications:"Manage company-wide communications and employee notifications.",
     Assets:"",
     Add_New_Employee:"Enter employee details to create a new profile",
     All_Organizations: 'Manage all organizations in your HRMS platform',
     Create_Organization: 'Set up a new organization in your HRMS platform',
     Organization_Settings: 'Set up a new organization in your HRMS platform',
     Super_Administrators: 'Manage system administrators and their permissions',
-    User_Statics: ''
-
+    User_Statics: '',
+    Training_and_Development: 'Manage training programs, enrollments, and employee development'
   }
 
   // Map human-readable titles to object keys
@@ -31,7 +31,7 @@ const Header = ({ readPath }) => {
     "leaveManagment": "Leave_Management",
     "performance":"Performance_Management",
     "training":"Training",
-    "announcement":"Announcement",
+    "announcement":"Announcements_and_Notifications",
     "assets":"Assets",
     "AddNewemployee": 'Add_New_Employee',
     "AddNewemployeesecond": 'Add_New_Employee',
@@ -48,7 +48,11 @@ const Header = ({ readPath }) => {
     'overview': 'Performance_Management',
     'goals': 'Performance_Management',
     'reviews': 'Performance_Management',
-    'feedBack': 'Performance_Management'
+    'feedBack': 'Performance_Management',
+    'enrolment':'Training_and_Development',
+    'overviewTraining':'Training_and_Development',
+    'program':'Training_and_Development',
+    'feedBackTraning':'Training_and_Development'
   }
 
   // Safely access the right key
