@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react"; 
-
-
 export function Dropdown({ label, options, selected, onSelect, placeholder, className }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);

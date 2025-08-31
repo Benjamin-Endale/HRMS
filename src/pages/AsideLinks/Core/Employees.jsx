@@ -63,7 +63,7 @@ const navigate = useNavigate();
               <td className='pt-[2.25rem]'>Engineering</td>
               <td className='pt-[2.25rem] max-w-[150px] whitespace-normal break-words'>Senior Software Developer</td>
               <td className='flex items-center gap-[2.5625rem] pt-[2.25rem]'>
-                <button type="button" className='cursor-pointer'>
+                <button type="button" className='cursor-pointer'  onClick={()=>navigate('/EmployeeDetail')}>
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1.89006 11.3191C1.81366 11.1133 1.81366 10.8869 1.89006 10.6811C2.63412 8.87695 3.89712 7.33437 5.51893 6.24891C7.14075 5.16345 9.04835 4.58398 10.9999 4.58398C12.9514 4.58398 14.859 5.16345 16.4809 6.24891C18.1027 7.33437 19.3657 8.87695 20.1097 10.6811C20.1861 10.8869 20.1861 11.1133 20.1097 11.3191C19.3657 13.1232 18.1027 14.6658 16.4809 15.7513C14.859 16.8367 12.9514 17.4162 10.9999 17.4162C9.04835 17.4162 7.14075 16.8367 5.51893 15.7513C3.89712 14.6658 2.63412 13.1232 1.89006 11.3191Z" stroke="#BEE532" stroke-width="1.375" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M10.9999 13.7501C12.5187 13.7501 13.7499 12.5189 13.7499 11.0001C13.7499 9.4813 12.5187 8.25009 10.9999 8.25009C9.48111 8.25009 8.24989 9.4813 8.24989 11.0001C8.24989 12.5189 9.48111 13.7501 10.9999 13.7501Z" stroke="#BEE532" stroke-width="1.375" stroke-linecap="round" stroke-linejoin="round"/>

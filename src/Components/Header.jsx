@@ -10,9 +10,9 @@ const Header = ({ readPath }) => {
     Leave_Management: "Manage employee leave requests, balances, and policies.",
     Recruitment_and_ATS: "Manage job postings, candidates, and hiring process",
     Performance_Management:"Track goals, conduct reviews, and manage employee performance.",
-    Training:"",
+    Training:"train",
     Announcements_and_Notifications:"Manage company-wide communications and employee notifications.",
-    Assets:"",
+    Assets:" ",
     Add_New_Employee:"Enter employee details to create a new profile",
     All_Organizations: 'Manage all organizations in your HRMS platform',
     Create_Organization: 'Set up a new organization in your HRMS platform',
@@ -57,13 +57,12 @@ const Header = ({ readPath }) => {
 
   // Safely access the right key
   const description = parag[keyMap[readPath]] || ""
-
+  const title = keyMap[readPath] ? keyMap[readPath].replace(/_/g, " ") : "";
   return (
     <div className='flex items-center w-full'>
       <header className='w-[calc(100%-3.0625rem)] flex items-center justify-between'>
         <div className='flex flex-col  leading-none space-y-[0.4375rem]'>
-          <h1 className='text-white text-[2rem] font-semibold'>{keyMap[readPath].replace(/_/g, ' ')} </h1>
-          <h4 className='text-limegray text-[15px] font-medium'>{description}</h4>
+<h1 className='text-white text-[2rem] font-semibold'>{title}</h1>          <h4 className='text-limegray text-[15px] font-medium'>{description}</h4>
         </div>
         <div className='h-full w-[13.375rem] text-nowrap'>
           <div className='flex items-center justify-between'>

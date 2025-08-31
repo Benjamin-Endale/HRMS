@@ -13,6 +13,7 @@ import Announcement from './pages/AsideLinks/Operation/Announcement'
 import AddNewemployee from './pages/EmployeeRegistration/AddNewemployee'
 import AddNewemployeesecond from './pages/EmployeeRegistration/AddNewemployeesecond'
 import Compensation from './pages/EmployeeRegistration/Compensation'
+import EmployeeDetail from './pages/EmployeeRegistration/EmployeeDetail'
 import System from './pages/EmployeeRegistration/System'
 import AllOrganization from './pages/SuperAdmin/Organization/AllOrganization'
 import CreateOrganization from './pages/SuperAdmin/Organization/CreateOrganization'
@@ -32,7 +33,6 @@ import Enrolment from './pages/Traning/Enrolment'
 import Program from './pages/Traning/Program'
 import OverviewTraining from './pages/Traning/OverviewTraining'
 
-
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -49,9 +49,8 @@ const App = () => {
           <Route path='AddNewemployee' element = {<AddNewemployee/>}/>
           <Route path='AddNewemployeesecond' element = {<AddNewemployeesecond/>}/>
           <Route path='Compensation' element = {<Compensation/>}/>
+          <Route path='EmployeeDetail' element = {<EmployeeDetail/>}/>
           <Route path='System' element = {<System/>}/>
-
-
 
           {/* OPERATION */}
           <Route path='assets' element = {<Assets/>}/>
