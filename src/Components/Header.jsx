@@ -1,4 +1,5 @@
 import React from 'react'
+import EmployeeDetail from '../pages/EmployeeRegistration/EmployeeDetail'
 
 const Header = ({ readPath }) => {
   // Object with code-friendly keys
@@ -27,6 +28,7 @@ const Header = ({ readPath }) => {
     "Dashboard": "Dashboard",
     "organization": "Organization",
     "employees": "Employee",
+    "EmployeeDetail": "Employee",
     "attendance": "Attendance",
     "leaveManagment": "Leave_Management",
     "performance":"Performance_Management",

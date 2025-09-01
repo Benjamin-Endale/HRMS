@@ -1,11 +1,37 @@
 import React, { useState } from 'react'
-
-
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+//import { number } from 'zod/v3';
+const schema = z.object({
+  username: z.string()
+    .min(6, "Username must be at least 6 characters")
+    .max(20, "Username must not exceed 20 characters")
+    .regex(/^[a-zA-Z][a-zA-Z0-9._]*$/, "Username must start with a letter and only contain letters, numbers, underscores, or dots"),
+  password:z.string()
+  .min(8, "Password must be at least 8 characters")
+   .regex(
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+  "Password must be characters, include uppercase, lowercase, number, and special character"),
+})
+const result = schema.safeParse({
+  username: "hello",
+  password: "1234",
+});
 const LoginPage = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('English')
   const languages = ['Amharic', 'Oromic', 'Afan oromo','English']
-
+  const {register , handleSubmit,setError,
+    formState:{errors, isSubmitting},
+  }=useForm({
+    resolver:zodResolver(schema),
+  });
+  const onSubmit = async (data) => {
+    await new Promise((resolve,) => setTimeout (resolve,1000));
+    console.log(data);
+  };
   return (
     <main className='h-screen w-screen flex items-center justify-center font-semibold '>
       <div className="flex justify-between items-center">
@@ -98,30 +124,27 @@ const LoginPage = () => {
 
 
 
-
-
-
-
-
-
-
-
-
               {/* {form validation} */}
               <div>
-                <form className="flex flex-col gap-[4.75rem]" action="">
+                <form  className="flex flex-col gap-[4.75rem]" action="" onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex flex-col gap-[2.4375rem]">
                     <div className="flex flex-col gap-[1rem]">
                       <label className="text-white" htmlFor="username">Username</label>
-                      <div className="relative flex items-center w-[31.0625rem] h-[3.4375rem]">
+                      <div className="relative flex flex-col justify-center w-[31.0625rem] h-[3.4375rem]">
                         <div className="absolute z-10 pl-[1.1875rem]">
                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 10.5C14.2091 10.5 16 8.70914 16 6.5C16 4.29086 14.2091 2.5 12 2.5C9.79086 2.5 8 4.29086 8 6.5C8 8.70914 9.79086 10.5 12 10.5Z" stroke="#3F4236" stroke-width="1.5"/>
         <path d="M12 21.5C15.866 21.5 19 19.7091 19 17.5C19 15.2909 15.866 13.5 12 13.5C8.13401 13.5 5 15.2909 5 17.5C5 19.7091 8.13401 21.5 12 21.5Z" stroke="#3F4236" stroke-width="1.5"/>
                           </svg>
                         </div>
-                        <input className="pl-[66px] h-full w-full  rounded-[5px] border-2 border-[#1D2015] text-white  focus:outline-none focus:border-lemongreen  focus:ring-lemongreen bg-[#1D2015]" name="username"  type="text"/>
+                        <input
+                        {...register("username", )}
+                        className="pl-[66px] h-full w-full  rounded-[5px] border-2 border-[#1D2015] text-white  focus:outline-none focus:border-lemongreen  focus:ring-lemongreen bg-[#1D2015]" name="username"  type="text" placeholder='ex. John Don'
+                        />           
                       </div>
+                        {errors.username && (
+                          <div className='text-Error'>{errors.username.message}</div>
+                        )}
                     </div>
     
                     <div className="flex flex-col gap-[1rem]">
@@ -134,10 +157,36 @@ const LoginPage = () => {
   <path d="M8 16.5H8.009M11.991 16.5H12M15.991 16.5H16" stroke="#3F4236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <input className="pl-[4.125rem] h-full w-full  rounded-[0.3125rem] border-2 border-[#1D2015] text-white  focus:outline-none focus:border-lemongreen  focus:ring-lemongreen bg-[#1D2015]" name="password" type="password"/>
-                      </div>
-                    </div>
+                      <input
+                      type={showPassword ? "text" : "password"}
+                        {...register("password" ,)}
+                        className="pl-[4.125rem] h-full w-full  rounded-[0.3125rem] border-2 border-[#1D2015] text-white  focus:outline-none focus:border-lemongreen  focus:ring-lemongreen bg-[#1D2015]" name="password" placeholder='*******************'/>
+                    <button
+      type="button"
+      onClick={() => setShowPassword(!showPassword)}
+      className="pr-[1.1875rem] absolute right-0 z-10"
+    >
+      {showPassword ? (
+  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.2935 1.93888C9.69399 1.89617 10.0968 1.87484 10.5 1.875C14.9308 1.875 18.48 4.41513 20 8C19.632 8.87199 19.1349 9.69293 18.5227 10.4395M5.294 3.20413C3.356 4.2935 1.855 5.98138 1 8C2.52 11.5849 6.0692 14.125 10.5 14.125C12.3355 14.1339 14.1377 13.6735 15.706 12.795M8.486 6.145C8.22133 6.38878 8.01138 6.67818 7.86815 6.99668C7.72491 7.31519 7.65118 7.65656 7.65118 8.00131C7.65118 8.34606 7.72491 8.68744 7.86815 9.00594C8.01138 9.32445 8.22133 9.61385 8.486 9.85763C8.75067 10.1014 9.06488 10.2948 9.41068 10.4267C9.75649 10.5586 10.1271 10.6265 10.5014 10.6265C10.8757 10.6265 11.2464 10.5586 11.5922 10.4267C11.938 10.2948 12.2522 10.1014 12.5168 9.85763" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.90039 1L18.1004 15" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
 
+
+      ) : (
+       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.88933 11.3191C1.81293 11.1133 1.81293 10.8869 1.88933 10.6811C2.63339 8.87695 3.89638 7.33437 5.5182 6.24891C7.14002 5.16345 9.04762 4.58398 10.9992 4.58398C12.9507 4.58398 14.8583 5.16345 16.4801 6.24891C18.1019 7.33437 19.3649 8.87695 20.109 10.6811C20.1854 10.8869 20.1854 11.1133 20.109 11.3191C19.3649 13.1232 18.1019 14.6658 16.4801 15.7513C14.8583 16.8367 12.9507 17.4162 10.9992 17.4162C9.04762 17.4162 7.14002 16.8367 5.5182 15.7513C3.89638 14.6658 2.63339 13.1232 1.88933 11.3191Z" stroke="#BEE532" stroke-width="1.375" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.9992 13.7501C12.5179 13.7501 13.7492 12.5189 13.7492 11.0001C13.7492 9.4813 12.5179 8.25009 10.9992 8.25009C9.48038 8.25009 8.24916 9.4813 8.24916 11.0001C8.24916 12.5189 9.48038 13.7501 10.9992 13.7501Z" stroke="#BEE532" stroke-width="1.375" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      )}
+    </button>
+                      </div>
+                        {errors.password && (
+                          <div className='text-Error'>{errors.password.message}</div>
+                        )}
+                      
+                    </div>
                       <div className="flex gap-[12.625rem]">
                         <label className="inline-flex items-center cursor-pointer">
                           <input className="peer hidden after" type="checkbox"/>
@@ -149,10 +198,12 @@ const LoginPage = () => {
                         </div>
                       </div>
                   </div>
-
                   {/* {Login} */}
                   <div className="bg-lemongreen w-full h-[3.4375rem] flex items-center justify-center rounded-[0.3125rem] ">
-                    <button className=" w-full h-[3.4375rem] rounded-[0.3125rem] border-3 outline-2 border-t-[hidden]   hover:outline-lemongreen cursor-pointer" type="submit">Login</button>
+                    <button className=" w-full h-[3.4375rem] rounded-[0.3125rem] border-3 outline-2 border-t-[hidden]   hover:outline-lemongreen cursor-pointer" 
+                    disabled={isSubmitting}
+                    type="submit">
+                      {isSubmitting ? "Loading..." : "Login"}</button>
                   </div>
                 </form>
               </div>
